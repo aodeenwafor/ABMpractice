@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+    <script>
+      function fncinput1(){
+      document.getElementById("RedDiv").style.display="none";
+    }
+
+    function fncinput(){
+      document.getElementById("BlueDiv").style.display="none";
+    }
+    
+    
+    function Visible1(){
+      document.getElementById("RedDiv").style.display="block";
+    }
+  
+  function fncVisible(){
+      document.getElementById("BlueDiv").style.display="block";
+    }
+  
+  function fncVisible(){
+      document.getElementById("GreenDiv").style.display="block";
+    }
+  
+   </script>
+</head>
+
+  <body onload="fncCallLang();">
+    <center>
+      <div id="MainDiv">
+        <div id="RedDiv" style="background-color: red;height: 100px;width: 170px;border: 1px solid black;">
+         <label>RED</label>
+        </div>
+        <div>
+          <input style="border-radius: 5px" type="text" oninput="fncinput();"></input>       
+        </div>
+
+        <div id="MiddleDiv">
+          <input style="background-color: yellow" type="button" onclick="fncVisible1();" value="Visible 1st Div"></input>
+          <br> 
+          <br>
+           <input type="button" onclick="fncVisible();" value="Visible 2nd Div"></input>      
+        </div>
+        <br>
+        <div id="BlueDiv" style="background-color: blue;height: 100px;width: 170px;border: 1px solid black;">
+         <label>Last Name</label>
+          <input style="border-radius: 5px" type="text" oninput="fncinput1();"></input>       
+        </div>
+         
+      </div>
+      <p style="text-align: center;">Made by Adamma &#169;</p>
+  </body>
+</html>
+
+
+
