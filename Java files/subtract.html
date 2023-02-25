@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script>
+
+function Sub(){
+    var n1=document.getElementById("n1").value;
+    var n2=document.getElementById("n2").value;
+    var sum=Number (n1)-Number (n2);
+    console.log(sum);
+    document.getElementById("total").innerHTML=sum;
+}
+
+function Mul(){
+    var n3=document.getElementById("n3").value;
+    var n4=document.getElementById("n4").value;
+    var sum=Number (n3)*Number (n4);
+    console.log(sum);
+    document.getElementById("Mult").innerHTML=sum;
+}
+
+function Mod(){
+    var n5=document.getElementById("n5").value;
+    var n6=document.getElementById("n6").value;
+    var sum=Number (n5)%Number (n6);
+    console.log(sum);
+    document.getElementById("Modl").innerHTML=sum;
+}
+
+function Div(){
+    var n7=document.getElementById("n7").value;
+    var n8=document.getElementById("n8").value;
+    var sum=Number (n7)/Number (n8);
+    console.log(sum);
+    document.getElementById("Divi").innerHTML=sum;
+}
+</script>
+</head>
+
+<body>
+  <p id="demo"></p>
+   <div>
+  <p>Subtraction</p>
+   <input type="text" id="n1"></div>
+   <br>
+   <div><input type="text" id="n2"></div>
+   <br>
+   <button onclick="Sub()">Sub</button>
+   <br>
+   <br>
+   <div label id="total"></label>
+   <input type="text" id="na"></div>
+ <br>
+ <br>
+
+<div>
+  <p>Multiply</p>
+   <input type="text" id="n3"></div>
+   <br>
+   <div><input type="text" id="n4"></div>
+   <br>
+   <button onclick="Mul()">Mult</button>
+   <br>
+   <br>
+   <label id="Mult"></label>
+
+   <br>
+   <br>
+
+   <div>
+   <p>Mod</p>
+   <input type="text" id="n5"></div>
+   <br>
+   <div><input type="text" id="n6"></div>
+   <br>
+   <button onclick="Mod()">Modulus</button>
+   <br>
+   <br>
+   <label id="Modl"></label>
+ <br>
+ <br>
+   
+   <div>
+    <p>Division</p>
+   <input type="text" id="n7"></div>
+   <br>
+   <div><input type="text" id="n8"></div>
+   <br>
+   <button onclick="Div()">Division</button>
+   <br>
+   <br>
+   <label id="Divi"></label>
+ <br>
+ <br>
+
+
+</body>
+</html>

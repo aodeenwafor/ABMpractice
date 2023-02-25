@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+    <script>
+    function fncinput(){
+      document.getElementById("SecondDiv").style.display="none";
+    }
+
+  function fncinput1(){
+      document.getElementById("FirstDiv").style.display="none";
+    }
+
+  function fncVisible(){
+      document.getElementById("SecondDiv").style.display="block";
+    }
+  
+  function fncVisible1(){
+      document.getElementById("FirstDiv").style.display="block";
+    }
+   </script>
+</head>
+
+  <body onload="fncCallLang();">
+    <center>
+      <div id="MainDiv">
+        <div id="FirstDiv" style="width: 100%;height: 180px;border: 1px solid blue;">
+         <label>First Name</label>
+          <input style="border-radius: 5px" type="text" oninput="fncinput();"></input>       
+        </div>
+
+        <div id="MiddleDiv">
+          <input style="background-color: yellow" type="button" onclick="fncVisible1();" value="Visible 1st Div"></input>
+          <br> 
+          <br>
+           <input type="button" onclick="fncVisible();" value="Visible 2nd Div"></input>      
+        </div>
+        <br>
+        <div id="SecondDiv" style="width: 100%;height: 180px;border: 1px solid blue;">
+         <label>Last Name</label>
+          <input style="border-radius: 5px" type="text" oninput="fncinput1();"></input>       
+        </div>
+         
+      </div>
+      <p style="text-align: center;">Made by Adamma &#169;</p>
+  </body>
+</html>
+
+
+

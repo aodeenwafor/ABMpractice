@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+    <script>
+    function chnagelang(language){
+      console.log(language);
+
+  if(language=="ENG"){
+    document.getElementById("lblfirstName").innerHTML="First Name"
+    document.getElementById("lblLastName").innerHTML="Last Name"
+  }
+  else
+  {
+    document.getElementById("lblfirstName").innerHTML="Prénom"
+    document.getElementById("lblLastName").innerHTML="Nom de famille"
+
+  }
+}
+    function loadit(){
+      document.getElementById("lblfirstName").innerHTML="First Name"
+       document.getElementById("lblLastName").innerHTML="Last Name"
+    }
+    
+</script>
+</head>
+
+  <body onload="loadit()">
+    <button value="ENG" onclick="chnagelang(this.value)">English</button>
+     <button value="FR" onclick="chnagelang(this.value)">French</button>
+
+     <br> <br> <br>
+
+     <label id="lblfirstName"></label>
+     <input type="text" id="Q1">
+  
+    <br> <br> <br>
+
+    <label id="lblLastName"></label>
+     <input type="text" id="Q2">
+
+</body>
+</html>
+
+
+
