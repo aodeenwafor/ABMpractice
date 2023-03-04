@@ -1,0 +1,79 @@
+Always put semi colon after every line
+
+function  areaofCircle(adamma){
+    var pie=Math.PI;
+    var radius= Math.pow(adamma,2);
+    
+    var finalanswer=pie*radius;
+    console.log(finalanswer);
+   
+   
+   
+}
+// paramter
+areaofCircle(5);
+
+
+Answer
+78.53981633974483
+
+
+function  areaofCircle(i){
+    var pie=Math.PI;
+    var radius= Math.pow(i,2);
+    
+    var area=pie*radius;
+    console.log(area);
+  
+}
+
+areaofCircle(5);
+
+answer=78.53981633974483
+
+
+
+
+function  Circle(adamma){
+    var pie=Math.PI;
+    
+    var finalanswer=2*pie*adamma;
+    console.log(finalanswer);
+   
+   
+   
+}
+// paramter
+Circle(5);
+
+
+
+function  Circle(i){
+    var pi=Math.PI;
+    
+    var circum=2*pi*i;
+    console.log(circum);
+   
+   
+   
+}
+
+Circle(100); 
+
+
+Area of a Hexagon
+
+function  areaofhex(i){
+    var a=Math.sqrt(3);
+    var r= Math.pow(i,2);
+    
+    var area=3*r*a/2;
+    console.log(area);
+   
+}
+
+areaofhex(2);
+
+answer=10.392304845413264
+
+

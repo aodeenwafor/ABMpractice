@@ -1,0 +1,44 @@
+avascript --> i a lang. which is written to manipulate in HTML tags..
+At the same time it helps you to play with tags and css.
+2. website--> 1. static website 2. dynamic website
+Javascript consists of basics operation
+1. BEDMAS  --> Modulus.
+Compiler --> has a set of rules which called syntax...
+Just in English --> Pronoun --> this should have subject and after we have predicate.
+ADD, SUBTRACT, DIVISION , MUL, MODULUS , EXPO
+1. What is function ?
+2. Complier
+Computer lang  binary form 0 & 1
+0000000  111111 -> Instructions
+code in js --> run --> machine and converts to code to machine level lang.  -> convert it into binary lang.
+Computer say i got the instructions it will show you the output
+Functions :  --> are the set of methods when we do our work--> they help us to achieve our work without doing repetitive work
+Method and function are both of them are synomns to each other.
+Are you methods ? are your working functions.....
+Method/ function chaining --> it a process in which you will be calling a function which will be linking to another function
+and later that function will be calling to another function over anf again.
+Function/ methods are getting called one by one to their respective work/
+
+Here WakemeUpEarlyInMorning is the function leading to another function TakeShowner. Method and function is the same except for 
+Functions have parameters (). 
+
+function  WakemeUpEarlyInMorning(){
+    console.log("Brush my teeth")
+    TakeShowner();
+}
+function TakeShowner(){
+    console.log("Shower taken");
+    GetreadyForOffice();
+}
+function GetreadyForOffice(){
+    console.log("Going to office in about 9 mins");
+    ReachedOffice();
+}
+function ReachedOffice(){
+    console.log("Getting started with my work");
+    Leaveat5pm();
+}
+function Leaveat5pm(){
+    console.log("Leaving for office now !!!")
+}
+WakemeUpEarlyInMorning();

@@ -1,0 +1,49 @@
+
+function Add(a,b){
+    var a=2;
+    var b=4;
+    var sum=a + b;
+    console.log(sum);
+}
+Add(2,4);
+
+function Sub(a,b){
+    var a=4;
+    var b=2;
+    var sum=a - b;
+    console.log(sum);
+}
+Sub(4,2)
+
+function Mol(a,b){
+    var a=6;
+    var b=5;
+    var sum=a % b;
+    console.log(sum);
+}
+Mol(6,5);
+
+function Mul(a,b){
+    var a=6;
+    var b=8;
+    var sum=a * b;
+    console.log(sum);
+}
+Mul(6,8);
+
+function Div(a,b){
+    var a=6;
+    var b=3;
+    var sum=a / b;
+    console.log(sum);
+}
+
+Div(6,3);
+
+
+ANSWER
+6
+2
+1
+48
+2

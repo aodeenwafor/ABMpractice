@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title></title>
+<style>
+   #myDIV {
+  width: 100%;
+  padding: 25px;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
+}
+</style>
+</head>
+<script>
+function image1() {
+  var x = document.getElementById("myDIV");
+  console.log(x);
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    document.getElementById("myDIV").style.backgroundColor = "coral";
+    x.innerHTML="Basketball"
+  } else {
+    x.style.display = "none";
+     document.getElementById("myDIV").style.backgroundColor = "white";
+    x.innerHTML="";
+  }
+}
+ </script>
+<br>
+<body style="width: 70%;height: 280px;border: 1px solid black;margin-left: 250px;margin-top: 50px;">
+    <div class="container" style="border: 1px solid black; width: 80%;">
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            What is your favorite sports?
+        </div>
+        <div class="col-md-4"><img src="images/plus.jpg" alt="pict" onclick="image1()" style="width:25px;height: 30px;width: 100px;margin-top: 5px;"></a>
+        </div>
+        <div id="myDIV" >
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container" style="border: 1px solid black;width: 80%;">
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            How many times you do your hobbies?
+        </div>
+        <div class="col-md-4"><img src="images/plus.jpg" alt="pict"  onclick="image()" style="width:25px;height: 30px;width: 100px;margin-top: 5px;"></a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container" style="border: 1px solid black;width:80%">
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                What season you most played?
+            </div>
+            <div class="col-md-4"><img src="images/plus.jpg" alt="pict"  onclick="image()" style="width:25px;height: 30px;width: 100px;margin-top: 5px;"></a>
+            </div>
+          </div>
+    </div>
+    </div>
+</body>
+</html>

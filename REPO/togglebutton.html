@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+function myFunction() {
+   var element = document.getElementById("answer");
+   element.classList.toggle("mystyle");
+}
+</script>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+  * {box-sizing: border-box;}
+
+.mystyle {
+  width: 100%;
+  padding: 25px;
+  background-color: ;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
+}
+</style>
+</head>
+<body>
+
+<h2>Frequently Asked Questions</h2>
+
+<input class="input-field" style="width: 225px" type="text" placeholder="Do you accept all major credit cards?" name=""><button onclick="myFunction()">+</button>
+<div id="answer" style="display:block; ">
+We accept all major credit cards and transfers.
+</div>
+
+<input class="input-field" style="width: 225px" type="text" placeholder="Do you have a list of products?" name=""><button onclick="myFunction()">+</button>
+<div id="answer" style="display: ">
+We support both local and out of province farmers.
+</div>
+
+<input class="input-field" style="width: 225px" type="text" placeholder="Do you accept all major credit cards?" name=""><button onclick="myFunction()">+</button>
+<div id="answer" style="display: ">
+We have a list of products in our homepage.
+</div>
+
+
+</body>
+</html>

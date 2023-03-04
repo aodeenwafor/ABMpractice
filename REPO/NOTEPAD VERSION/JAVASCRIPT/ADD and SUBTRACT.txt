@@ -1,0 +1,61 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+
+
+function Add(){
+    var number1=10;
+    var number3=30;
+    var sum=number1 + number3;
+    console.log(sum);
+}
+
+Add();
+
+
+
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+
+
+function Sub(){
+    var number5=50;
+    var number2=20;
+    var sum=number5 - number2;
+    console.log(sum);
+}
+
+Sub();
+
+
+function Mul(){
+    var number5=5;
+    var number2=2;
+    var sum=number5 * number2;
+    console.log(sum);
+}
+
+Mul();
+
+function Div(){
+    var number5=40;
+    var number2=5;
+    var sum=number5 / number2;
+    console.log(sum);
+}
+
+Div();
+
+
+function Mod(){
+    var number5=5;
+    var number2=3;
+    var sum=number5 % number2;
+    console.log(sum);
+}
+
+Mod();
+
+
+

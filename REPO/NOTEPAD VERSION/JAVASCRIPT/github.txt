@@ -1,0 +1,14 @@
+aodeenwaforstudy@gmail.com
+
+abm1993ABM
+
+aodeenwafor
+
+
+
+git config --global user.name "aodeenwafor"
+git config --global user.email "aodeenwaforstudy@gmail.com"
+git config --list
+git config --global user.password "abm1993ABM"
+git config --global credential.helper store
+git config --list --show-origin

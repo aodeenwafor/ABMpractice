@@ -1,0 +1,42 @@
+Printing table of even numbers
+
+for(var adamma=1;adamma<=100;adamma++){
+    if(adamma % 2==0)
+{
+    console.log(adamma)
+}
+}
+
+Printing table of odd numbers
+
+for(var adamma=1;adamma<=100;adamma++){
+    if(adamma % 2==1)
+{
+    console.log(adamma)
+}
+}
+
+Printing Table of 8
+
+for(var i=1;i<=80;i++){
+    if(i % 8==0)
+{
+    console.log(i)
+}
+}
+
+Counting 1 to 100
+for(var adamma=1;adamma<=100;adamma++){
+    if(adamma)
+{
+    console.log(adamma)
+}
+}
+
+Counting 100 to 1
+for(var adamma=100;adamma>=1;adamma--){
+    if(adamma)
+{
+    console.log(adamma)
+}
+}

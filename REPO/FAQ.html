@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script>
+    function fncFAQ() {
+     var x=document.getElementById("toggle1");
+     console.log(x);
+   if (x.style.display === "block") {
+    x.style.display = "none";
+   }
+   else{
+    x.style.display = "block";
+   }
+    var x=document.getElementById("toggle2");
+     console.log(x);
+   if (x.style.display === "block") {
+    x.style.display = "none";
+   }
+   else{
+    x.style.display = "block";
+   }
+
+  var x=document.getElementById("toggle3");
+     console.log(x);
+   if (x.style.display === "block") {
+    x.style.display = "none";
+   }
+   else{
+    x.style.display = "block";
+   }
+
+
+   }
+
+ </script>
+
+</head>
+<style>
+  body {font-family: Arial, Helvetica, sans-serif;}
+  * {box-sizing: border-box;}
+
+  .input-container {
+    display: -ms-flexbox; 
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .toggle-icon {
+    font-size: 2em;
+    margin-right: 0.5em;
+    border: none;
+    color:#ff8f6b;text-align: center;
+    min-width: 50px;
+  }
+  .question {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    border: 1px solid black;
+    display: -ms-flexbox; 
+    display: flex;
+  }
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+  }
+  .answer {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+  .btn{border-radius: 15px;
+
+  }
+
+</style>
+<body>
+
+  
+    <h2>Frequently Asked Questions</h2>
+    <div class="input-container" >
+      <input style="width: 20%" class="input-field" placeholder="Do you accept all major credit cards?" >
+  <button id="btnplus" style="border: 1px solid black;background-color:white;"onclick="fncFAQ();">
+        <span class="toggle-icon" style="padding-left: 7px;">+</span></input>
+      </button>
+      <div id="toggle1">
+        We accept all major credit cards and transfers.
+      </div>
+    </div>
+    <br>
+    <div class="">
+      <input style="width: 20%" class="input-field" type="text" placeholder="Do you support all local farmers?" name=""></input>
+      <button id="btnplus2" style="border: 1px solid black;background-color: white;" onclick="fncFAQ()"><span class="toggle-icon" style="padding-left: 7px; height:20px">+</span>
+      </button>
+      <div id="toggle2">
+        We support both local and out of province farmers
+      </div>
+    <br>
+    <div class="input-container">
+      <input style="width: 20%" class="input-field" type="password" placeholder="Do you have a list of products?" name=""></input>
+      <button id="btnplus2"  style="border: 1px solid black;background-color: white;" onclick="fncFAQ()"><span class="toggle-icon" style="padding-left: 7px;" >+</span>
+      </button>
+       <div id="toggle3">
+        We have a list of products in our homepage.
+      </div>
+    </div>
+
+  </body>
+  </html>
