@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function myfunction(){
+       console.log("Welcome to McDonalds Canada.")
+       var userinputCity=prompt("1. Montreal 2. Calgary 3. Ottawa")
+       if (userinputCity == "1"){
+       	console.log("Welcome to McDonalds Montreal.")
+       }
+       else if (userinputCity == "2"){
+       	console.log("Welcome to McDonalds Calgary.")
+       }
+       else if (userinputCity == "3"){
+       	console.log("Welcome to McDonalds Ottawa.")
+       }
+       menu();
+       
+     }
+     function menu(){
+     	 var menu=prompt("Press 1  to print menu");
+       if (menu == "1"){
+       	var userOrder=prompt("1.Big Mac : $6.99 2. Junior Chicken : $2.99 3. McDouble : $5.99")
+       }
+       if (userOrder == "1"){
+         console.log("Big Mac ordered");
+          orderAgain();
+        }
+        else if (userOrder == "2"){
+         console.log("Junior Chicken ordered");
+          orderAgain();
+        }
+       else if (userOrder == "3"){
+         console.log("McDouble ordered");
+          orderAgain();
+        }
+     }
+        function orderAgain(){
+         var order=prompt("Do you want to make another order? Press y or n");
+       if (order == "y"){
+       menu();
+       }
+        else{
+        	console.log("Your order will be ready in 15mins. Have a lovely day.")
+        }
+        }
+
+</script>
+</head>
+<body>
+	
+	<button onclick="myfunction()">Make your Order</button>
+ 
+</body>
+</html>
