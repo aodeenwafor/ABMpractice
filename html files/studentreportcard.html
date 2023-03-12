@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script >
+		var intEnglishTotalMarks=100;
+        var intMathsTotalMarks=100;
+		var intBiologyTotalMarks=100;
+		var intChemistryTotalMarks=100;
+		var intCommerceTotalMarks=100;
+		var intPhysicsTotalMarks=100;
+        
+        var intEnglishFT=78;
+        var intMathsFT=80;
+		var intBiologyFT=72;
+		var intChemistryFT=78;
+		var intCommerceFT=75;
+		var intPhysicsFT=70;
+
+
+		function fncfillTotalMarks(){
+		document.getElementById("lblEnglishTotalMarks").innerHTML=intEnglishTotalMarks;
+		document.getElementById("lblMathsTotalMarks").innerHTML=intMathsTotalMarks;
+		document.getElementById("lblBiologyTotalMarks").innerHTML=intBiologyTotalMarks;
+		document.getElementById("lblChemistryTotalMarks").innerHTML=intChemistryTotalMarks;
+		document.getElementById("lblCommerceTotalMarks").innerHTML=intCommerceTotalMarks;
+		document.getElementById("lblPhysicsTotalMarks").innerHTML=intPhysicsTotalMarks;
+
+        var sum=(intEnglishTotalMarks)+(intBiologyTotalMarks)+(intChemistryTotalMarks)+(intMathsTotalMarks)+(intCommerceTotalMarks)+(intPhysicsTotalMarks)
+		 document.getElementById("lblTMfirstT").innerHTML = sum;
+
+         document.getElementById("lblEnglishFT").innerHTML=intEnglishFT;
+		document.getElementById("lblMathsFT").innerHTML=intMathsFT;
+		document.getElementById("lblBiologyFT").innerHTML=intBiologyFT;
+		document.getElementById("lblChemistryFT").innerHTML=intChemistryFT;
+		document.getElementById("lblCommerceFT").innerHTML=intCommerceFT;
+		document.getElementById("lblPhysicsFT").innerHTML=intPhysicsFT;
+
+        var sum=(intEnglishFT)+(intMathsFT)+(intBiologyFT)+(intChemistryFT)+(intCommerceFT)+(intPhysicsFT)
+          document.getElementById("lblTOMFirstT").innerHTML = sum;
+
+          fncGrades();
+		}
+
+           function fncGrades(){
+
+			if(intEnglishFT >= 75){
+				document.getElementById("EnglishFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("EnglishFTStatus").innerHTML="Fail";
+			}
+             if(intMathsFT >= 75){
+				document.getElementById("MathsFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("MathsFTStatus").innerHTML="Fail";
+			}
+
+            if(intBiologyFT >= 75){
+				document.getElementById("BiologyFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("BiologyFTStatus").innerHTML="Fail";
+			}
+            if(intChemistryFT >= 75){
+				document.getElementById("ChemistryFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("ChemistryFTStatus").innerHTML="Fail";
+			}
+             if(intCommerceFT>= 75){
+				document.getElementById("CommerceFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("CommerceFTStatus").innerHTML="Fail";
+			}
+          if(intPhysicsFT>= 75){
+				document.getElementById("PhysicsFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("PhysicsFTStatus").innerHTML="Fail";
+			}
+
+		}
+
+
+	</script>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;font-size: 15px;
+    }
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    .container{padding: 20px;
+     margin-left: 80px;
+     margin-right: 100px;width: 70%;
+     border: solid #004b9f 1px;
+     background-color: #e3f5ff;
+     border-radius: 5px;
+   }
+   th {
+    height: 50px;
+  }
+  th, td {
+    padding: 15px;
+    text-align: center;
+  }
+</style>
+</head>
+<body onload="fncfillTotalMarks();">
+  <div class="container">
+    <div id="HeadDiv" class="Heading">
+      <label style="text-align: center; font-size: 24px">Student Report Card</label>
+    </div>
+    <p>Student Report Card.</p>
+
+    <table style="width:100%">
+      <tr>
+        <th style="text-align: left">Name: James Smith</th>
+        <th colspan="3">1st Term Exam</th>
+        <th colspan="3">2nd Term Exam</th>
+        <th colspan="3">Final Term Exam</th>
+      </tr>
+      <tr>
+        <td style="text-align: left"><b>Subject<b></td>
+          <td><label id="lblTotalMarksFirstT"></label>Total Marks</td>
+          <td><label id="lblObtMarksFirstT"></label>Obt Marks</td>
+          <td>Status</td>
+          <td><label id="lblTotalMarksSecondT"></label>Total Marks</td>
+          <td><label id="lblObtMarksSecondT"></label>Obt Marks</td>
+          <td>Status</td>
+          <td><label id="lblTotalMarksFinalT"></label>Total Marks</td>
+          <td><label id="lblObtMarksFinalT"></label>Obt Marks</td>
+          <td>Status</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">English</td>
+          <td><label id="lblEnglishTotalMarks"></label>
+          </td>
+          <td>
+            <label id="lblEnglishFT"></label>
+          </td>
+          <td>
+            <label id="EnglishFTStatus"></label>
+          </td>
+          <td></td>
+          <td>
+            <label id="lblEnglishSecT">72</label>
+          </td>
+          <td>
+            <label id="EnglishSTSatus"></label>
+          </td>
+          <td></td>
+          <td>
+            <label id="lblEnglishFinT">87</label>
+          </td>
+          <td>
+            <label id="EnglishFinalTSatus"></label>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Maths</td>
+           <td><label id="lblMathsTotalMarks"></label>
+          </td>
+          <td>
+            <label id="lblMathsFT"></label>
+          </td>
+          <td>
+            <label id="MathsFTStatus"></label>
+          </td>
+          <td></td>
+         <td>
+            <label id="lblMathsSecT">70</label>
+          </td>
+          <td>
+            <label id="MathsSTSatus"></label>
+          </td>
+          <td></td>
+          <td>
+            <label id="lblMathsFinalT">75</label>
+          </td>
+          <td>
+            <label id="MathsFinalTSatus"></label>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Biology</td>
+           <td><label id="lblBiologyTotalMarks"></label>
+          </td>
+          <td>
+            <label id="lblBiologyFT"></label>
+          </td>
+          <td>
+            <label id="BiologyFTStatus"></label>
+          </td>
+          <td></td>
+           <td>
+            <label id="lblBiologySecT">80</label>
+          </td>
+          <td>
+            <label id="BiologySTSatus"></label>
+          </td>
+          <td></td>
+          <td>
+            <label id="lblBiologyFinalT">85</label>
+          </td>
+          <td>
+            <label id="BiologyFinalTSatus"></label>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Chemistry</td>
+           <td><label id="lblChemistryTotalMarks"></label>
+          </td>
+          <td>
+            <label id="lblChemistryFT"></label>
+          </td>
+          <td>
+            <label id="ChemistryFTStatus"></label>
+          </td>
+          <td></td>
+         <td>
+            <label id="lblChemistrySecT">75</label>
+          </td>
+          <td>
+            <label id="ChemistrySTSatus"></label>
+          </td>
+          <td></td>
+          <td>
+            <label id="lblChemistryFinalT">85</label>
+          </td>
+          <td>
+            <label id="ChemistryFinalTSatus"></label>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Commerce</td>
+        <td><label id="lblCommerceTotalMarks"></label>
+          </td>
+          <td>
+            <label id="lblCommerceFT"></label>
+          </td>
+          <td>
+            <label id="CommerceFTStatus"></label>
+          </td>
+          <td></td>
+         <td>
+            <label id="lblCommerceSecT">75</label>
+          </td>
+          <td>
+            <label id="CommerceSTStatus"></label>
+          </td>
+          <td></td>
+          <td>
+            <label id="lblCommerceFinalT">85</label>
+          </td>
+          <td>
+            <label id="CommerceFinalTStatus"></label>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left">Physics</td>
+          <td><label id="lblPhysicsTotalMarks"></label>
+          </td>
+         <td>
+            <label id="lblPhysicsFT"></label>
+          </td>
+          <td>
+            <label id="PhysicsFTStatus"></label>
+          </td>
+          <td></td>
+         <td>
+            <label id="lblPhysicsSecT">75</label>
+          </td>
+          <td>
+            <label id="PhysicsSTStatus"></label>
+          </td>
+          <td></td>
+          <td>
+            <label id="lblPhysicsFinalT">85</label>
+          </td>
+          <td>
+            <label id="PhysicsFinalTStatus"></label>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: left">
+            <label id="Total"><b>Total<b></label>
+            </td>
+            <td>
+              <label id="lblTMfirstT"></label>
+            </td>
+            <td>
+              <label id="lblTOMFirstT"></label>
+            </td>
+            <td>
+              <label id="lblStatusFirstT"></label>
+            </td>
+            <td>
+              <label id="TMSecondT"></label>
+            </td>
+            <td>
+              <label id="TOMSecondT"></label>
+            </td>
+            <td>
+              <label id="StatusSecondT"></label>
+            </td>
+            <td>
+              <label id="TMFinalT"></label>
+            </td>
+            <td>
+              <label id="TOMFinalT"></label>
+            </td>
+            <td>
+              <label id="StatusFinalT"></label>
+            </td>
+          </tr>
+
+
+        </table>
+      </div>
+    </body>
+    </html>
