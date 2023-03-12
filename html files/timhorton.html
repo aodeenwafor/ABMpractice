@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <script>
+    var Products="";
+    var rate=0;
+    function myfunction() {
+      console.log("Welcome to Tim Hortons");
+      var userinputProvince=prompt("1.Alberta 2.Quebec 3.BC");
+      if (userinputProvince == "1"){
+        console.log("Welcome to Tim Hortons Alberta");
+      }
+      else if (userinputProvince == "2"){
+          console.log("Welcome to Tim Hortons Quebec");
+      }
+      else if (userinputProvince == "3"){
+          console.log("Welcome to Tim Hortons BC");
+      }
+      selectItem();
+    }
+      
+      function selectItem(){
+        var items=prompt("1. Coffee 2. Muffin 3. Bagel 4. Doughnut")
+        fncinput(items);
+      }
+      function fncinput(userOrder){
+        if (userOrder =="1"){
+          Products+="Coffee 1$";
+          rate+=1;
+          console.log("Coffee 1$");
+      orderagain();
+        }
+        if (userOrder =="2"){
+           Products+="Muffin 3$";
+           rate+=3;
+          console.log("Muffin 3$");
+      orderagain();
+        }
+        if (userOrder =="3"){
+           Products+="Bagel 4$";
+           rate+=4;
+          console.log("Bagel 4$");
+      orderagain();
+        }
+        if (userOrder =="4"){
+          Products+="Doughnut 2$";
+          rate+=2;
+          console.log("Doughnut 2$");
+      orderagain();
+        }
+    }
+      function orderagain(){
+        var question=prompt("Continue order? y or n");
+        if (question == "y"){
+          selectItem();
+        }
+        else if (question == "n"){
+          console.log("Your final bill with items selected :" + Products);
+          TotalCost();
+          PrintReciept();
+          
+
+            }
+
+    }
+   function TotalCost(){
+      console.log("Your total cost is :" + rate);
+      
+    }
+      
+    function PrintReciept(){
+      console.log("have a great day");
+    }
+  </script>
+</head>
+    <body onload="myfunction()">
+</body>
+</html>
