@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+ function validateEmail() {
+    const email = document.getElementById("email").value;
+    const pattern = /@gmail\.com$/;
+   //regex (regular expression)
+    if (!pattern.test(email)) {
+     document.getElementById("error").style.display="block";
+      return false;
+    }
+    else{ 
+  document.getElementById("error").style.display="none";
+  Proceed();
+}
+  }
+
+</script>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;
+      font-size:20px;
+    }
+</style>
+</head>
+<body>
+  <br>
+ 
+   <label id="lblEmail">Email</label>
+ 
+  <input style="margin-left: 10px" type="email" id="email" placeholder="">
+
+  <label id="error" style="color: red;font-size: 12px;font-style: italic;display: none;">Please use a valid email</label>
+  <br><br>
+
+   <button onclick="validateEmail()">Submit</button>
+
+
+
+</body>
+
+</html>
