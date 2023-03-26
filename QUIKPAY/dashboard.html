@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+<script></script>
+<style>
+  body {
+    font-family: "Lato", sans-serif;margin-right: 200px;color: #003c58;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: none;
+  }
+  th, td {
+    text-align: left;
+    padding: 16px;
+  }
+
+  input{
+ 
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+
+  }
+  button {
+    background-color: #003c58;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+   
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+  .sidenav {
+    height: 100%;
+    width: 170px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 8;
+    background-color: #92BAF0;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+  }
+  .btn {
+    border-radius:20px;
+    color: white;
+    padding: 12px 12px;
+    font-size: 16px;
+    cursor: pointer;
+
+  }
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    display: block;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  .container {
+    padding: 16px;background: white;width: 70%;
+    margin-left: 1px;margin-top: 10px;height:110px;
+    border-radius:2px;background-color: #92BAF0;
+  }
+
+  .main {
+    margin-left: 200px; 
+    font-size: 18 px; 
+    padding: 0px 10px;
+  }
+  .dropdown{
+    float: right;
+  }
+  .table2{
+    font-size: 12px;
+    padding: 5px;
+    width: 100%;
+    text-align: left;
+  }
+  .-vebal{
+    color: red
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+ .mydiv{float: right;
+
+  }
+</style>
+</head>
+<body>
+  <br>
+  <div class="sidenav" style="font-weight: bold;">
+    <br>
+    <br>
+    <br>
+    <a href="#about"><i class="fa fa-group"></i>  DASHBOARD</a>
+    <br>
+    <a href="#services"><i class="fa fa-briefcase"></i>  ACCOUNT</a>
+    <br>
+    <a href="#clients"><i class="fa fa-exchange"></i>  EXCHANGE</a>
+    <br>
+    <a href="#contact"><i class='fa fa-laptop'></i>  RECIPIENT</a>
+    <br>
+    <a href="#contact"><i class="fa fa-line-chart"></i>  REPORTS</a>
+    <br>
+    <a href="#contact"><i class="fa fa-gear"></i>  SETTINGS</a>
+  </div>
+
+  <div  class="main">
+    <img style="width: 180px" src="image/quikpay-logo.png" alt="quickpay" class="quikpay">
+    <div class="dropdown">
+      <i style=" color: #003c58" class="fa fa-user-circle"></i>
+      <select style=" border: none;color:#003c58 ">
+        <option value="username">USERNAME</option>
+      </select>
+    </div>
+    <table style="width: 100%;">
+      <tr>
+        <td style="width: 80%"><h2 style="font-family: Lucida Console; font-size: 50px;line-height: 40%; text-align: left; font-weight: normal;">DASHBOARD</h2>
+        </td>
+          <td >
+          <button class="btn"><i class="fa fa-bank"></i></button><br>Fund account
+        </td>
+        <td>
+          <button class="btn"><i class="fa fa-paper-plane"></i></button><br>Send money
+        </td>
+        <td>
+          <button class="btn"><i class="fa fa-share"></i></button><br>Recieve money
+        </td>
+        <td >
+          <button class="btn" ><i class="fa fa-money"></i></button><br>Pay bill
+        </td>
+        
+      </tr>
+    </table>
+    <hr>
+    <div>
+     <p style=" line-height: 100%;">CAD Account Details <br><span style="font-size: 12px">1233456789</span></p>
+     <p style=" line-height: 100%;">USD Account Details <br><span style="font-size: 12px">1239876543</span></p>
+   </div>
+
+   <div class="container" style="width:97%;height: 100px">
+
+    <table>
+      <tr>
+        <td>
+          <label id="" style="font-size: 15px">YOU SEND</label><br>
+            <input type="text" name="" placeholder="0,000.00"style="width: 250px;height: 45px;font-size: 15px">
+            <button>
+              <span>CAD<i class="fa fa-angle-down"  style="height: 10px"></i></span></input>
+            </button>
+            <br>
+            <label style="font-size: 13px;">Guaranteed rate(72hrs)</label>
+          </td>
+          <td>
+          <label id="" style="font-size: 15px">RECIPIENT RECIEVES</label><br>
+            <input type="text" name="" placeholder="0,000.00" style="width: 250px;height: 44px;font-size: 15px"><button>
+                <span>USD<i class="fa fa-angle-down"  style="height: 10px"></i></span></input>
+            </button>
+              <br>
+              <label style="font-size: 14px;">.</label>
+            </td>
+            <td>
+             <button class="button" style="font-size: 14px;width:250px ">GET THIS RATE</button>
+           </td>
+         </tr> 
+       </table>
+     </div>
+
+     <table class="table2">
+      <tr>
+
+        <th colspan="3" style="font-size: 20px; text-align: left;">Latest Transaction</th>
+
+      </tr>
+      <tr style="font-size: 16px; border-bottom: 1px solid #ddd; text-align: left;">
+        <td><label id="lblTotalMarksFirstT"></label>Date</td>
+        <td><label id="lblObtMarksFirstT"></label>Transaction</td>
+        <td><label id="lblObtMarksFirstT"></label>Amount</td>
+        <td><label id="lblObtMarksFirstT"></label>Balance</td>
+      </tr>
+
+      <tr>
+
+        <td>
+          <label id="lblEnglishTotalMarks">ddmonthyyy</label>
+        </td>
+        <td>
+          <label id="lblEnglishFT">Transaction#1234 To/From your CAD/USD bal</label>
+        </td>
+        <td>
+          <label id="EnglishFTStatus">0,000.00CAD</label>
+        </td>
+        <td style="color: green">
+          <label id="lblEnglishSecT">00,000.00<span style="color:#003c58 ">CAD</label>
+          </td>
+        </tr>
+        <tr>
+
+          <td>
+            <label id="lblEnglishTotalMarks">ddmonthyyy</label>
+          </td>
+          <td>
+            <label id="lblEnglishFT">Transaction#1234 To/From your CAD/USD bal</label>
+          </td>
+          <td>
+            <label id="EnglishFTStatus">0,000.00CAD</label>
+          </td>
+          <td class="-vebal">
+            <label  id="lblEnglishSecT">-00,000.00<span style="color:#003c58 ">CAD</label>
+            </td>
+          </tr>
+          <tr>
+
+            <td>
+              <label id="lblEnglishTotalMarks">ddmonthyyy</label>
+            </td>
+            <td>
+              <label id="lblEnglishFT">Transaction#1234 To/From your CAD/USD bal</label>
+            </td>
+            <td>
+              <label id="EnglishFTStatus">0,000.00CAD</label>
+            </td>
+            <td style="color: green">
+              <label id="lblEnglishSecT">00,000.00<span style="color:#003c58 ">CAD</span></label>
+            </td>
+          </tr>
+          <tr>
+
+            <td>
+              <label id="lblEnglishTotalMarks">ddmonthyyy</label>
+            </td>
+            <td>
+              <label id="lblEnglishFT">Transaction#1234 To/From your CAD/USD bal</label>
+            </td>
+            <td>
+              <label id="EnglishFTStatus">0,000.00CAD</label>
+            </td>
+            <td class="-vebal">
+              <label  id="lblEnglishSecT">-00,000.00<span style="color:#003c58 ">CAD</label>
+              </td>
+            </tr>
+          </table>
+          <hr>
+          <p style="text-align: center; font-size: 12px">&#169; QuikPay Wallet 2023, designed by Adamma</p>
+        </body>
+        </html> 

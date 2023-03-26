@@ -5,175 +5,7 @@
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
  <script> 
 
-   function fnCheck(email){
-    console.log(email);
-    if(validateEmail(email)!=true){
-      document.getElementById("divErrorEmail").style.display="block";
-      document.getElementById("txtEmail").focus();
-    }
-    else{
-      document.getElementById("divErrorEmail").style.display="none";
-    }
-  }
-    function validateEmail(email) {
-    var re = /\S+@\S+\.\S+/;
-    return re.test(email);
-  }
-
-   function fncValidate()
-   {
-     var FirstName=document.getElementById("txtFirstName").value;
-     var LastName=document.getElementById("txtLastName").value;
-     var Email=document.getElementById("txtEmail").value;
-     var StreetAddress=document.getElementById("txtStreetAddress").value;
-     var City=document.getElementById("txtCity").value;
-     var MobileNumber=document.getElementById("txtMobileNumber").value;
-     var CreatePassword=document.getElementById("txtCreatePassword").value;
-     var ConfirmPassword=document.getElementById("txtConfirmPassword").value;
-     var PostalCode=document.getElementById("txtPostalCode").value;
-     var Province=document.getElementById("optionProvince").value;
-     var Terms=document.getElementById("checkboxTerms").checked;
-     var Country=document.getElementById("optionCountry").value;
-
-
-     console.log(FirstName);
-     console.log(LastName);
-     console.log(Email);
-     console.log(StreetAddress);
-     console.log(City);
-     console.log(MobileNumber);
-     console.log(CreatePassword);
-     console.log(ConfirmPassword);
-     console.log(PostalCode);
-     console.log(Province);
-     console.log(Terms);
-     console.log(Country);
-
-
-    if(FirstName==""){
-      document.getElementById("divErrorFirstName").style.display="block";
-      document.getElementById("txtFirstName").focus();
-      return false;
-      }
-    else{
-     document.getElementById("divErrorFirstName").style.display="none";
-        }
-
-   if(LastName==""){
-     document.getElementById("divErrorLastName").style.display="block";
-     document.getElementById("txtLastName").focus();
-     return false;
-     }
-    else{
-    document.getElementById("divErrorLastName").style.display="none";
-     }
-
-   if(Email=="" && validateEmail(Email)){
-    document.getElementById("divErrorEmail").style.display="block";
-  document.getElementById("txtEmail").focus();
-  return false;
-     }
-    else{
-      document.getElementById("divErrorEmail").style.display="none"
-    }
-
-   if(StreetAddress==""){
-    document.getElementById("divErrorStreetAddress").style.display="block";
-    document.getElementById("txtStreetAddress").focus();
-   return false; 
-    }
-    else{
-      document.getElementById("divErrorStreetAddress").style.display="none";
-    }
-
-        if(City==""){
-         document.getElementById("divErrorCity").style.display="block";
-         document.getElementById("txtCity").focus();
-         return false;
-        }
-        else{
-        document.getElementById("divErrorCity").style.display="none";
-        }
-        if(Province=="Select One"){
-         document.getElementById("divErrorProvince").style.display="block";
-         document.getElementById("optionProvince").focus();
-         return false;
-        }
-        else{
-          document.getElementById("divErrorProvince").style.display="none";
-        }
-
-        if(Country=="Select One"){
-         document.getElementById("divErrorCountry").style.display="block";
-         document.getElementById("optionCountry").focus();
-         return false;
-        }
-        else{
-          document.getElementById("divErrorCountry").style.display="none";
-        }
-        if(Country=="United States"){ 
-          // console.log(Country)
-          if(PostalCode.Lenght==5){
-            //United States
-          }
-          if{
-            // Canada
-          }
-        }
-         else if (Country=="Canada"){ 
-            if(PostalCode.Lenght==6 && A#A#A#){
-            //Canada
-          }
-          else if{
-            // United States
-          }
-
-        
-        if(PostalCode==""){
-         document.getElementById("divErrorPostalCode").style.display="block";
-         document.getElementById("txtPostalCode").focus();
-         return false;
-        }
-        else{
-          document.getElementById("divErrorPostalCode").style.display="none";
-        }
-
-        if(MobileNumber==""){
-         document.getElementById("divErrorMobileNumber").style.display="block";
-         document.getElementById("txtMobileNumber").focus();
-         return false;
-        }
-        else{
-           document.getElementById("divErrorMobileNumber").style.display="none";
-        }
-
-        if(CreatePassword==""){
-         document.getElementById("divErrorCreatePassword").style.display="block";
-         document.getElementById("txtCreatePassword").focus();
-         return false;
-        }
-        else{
-          document.getElementById("divErrorCreatePassword").style.display="none";
-        }
-
-        if(ConfirmPassword==""){
-         document.getElementById("divErrorConfirmPassword").style.display="block";
-         document.getElementById("txtConfirmPassword").focus();
-         return false;
-        }
-        else{
-          document.getElementById("divErrorConfirmPassword").style.display="none";
-        }
-
-        if(Terms!=true){
-         document.getElementById("divErrorTerms").style.display="block";
-         document.getElementById("checkboxTerms").focus();
-         return false;
-        }
-        else{
-          document.getElementById("divErrorTerms").style.display="none"
-        }
-}
+ 
 </script>
 <meta charset="utf-8">  
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -197,7 +29,7 @@
 
    <div class="form-row">
     <div class="form-row">
-      <img src="images/logo.png" alt="tap" width="80" height="90" class="d-inline-block align-text-top"></div>
+      <img src="images/quikpay-logo.png" alt="tap" width="80" height="90" class="d-inline-block align-text-top"></div>
       <h2>Create your account</h2>
       <p style="font-style: italic;">*All fields required</p>
       <div class="row">
@@ -324,7 +156,7 @@
     <br>
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="checkboxTerms">
-      <label id="lblTerms" style="color: red;font-size: 13px"  class="form-check-label">
+      <label id="lblTerms" style="color: red"  class="form-check-label">
         I have read and agreed to the <span style="color: blue">Terms of Use</span> and <span style="color: blue">Privacy Notice</span> (Required).
       </label>
       <div id="divErrorTerms" style="display: none";>
@@ -333,7 +165,7 @@
     </div>
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-      <label class="form-check-label" for="defaultCheck1" style="font-size: 13px">
+      <label class="form-check-label" for="defaultCheck1">
         By checking this box, you agree to  receive emails from Peach Bakery. You can unsubscribe at any time.
       </label>
     </div>
