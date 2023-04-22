@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script>
+		var count=0;
+		var cost=8.75;
+		function Add(){
+			count++;
+			document.getElementById("lblQtyCarrot").innerHTML=count;
+			document.getElementById("Total").value="$"+count*cost;
+			console.log(count);
+		}
+		function Sub(){
+			count--;
+			document.getElementById("lblQtyCarrot").innerHTML=count;
+			document.getElementById("Total").value="$"+count*cost;
+			console.log(count);
+		}
+		function myfunction(){
+			document.getElementById("lblQtyCarrot").innerHTML="";
+			document.getElementById("Total").innerHTML="$"+8.75;
+			   }
+	</script>
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif;font-size:15px
+		}
+		button{
+			border: none; 
+			border-radius: 16px;
+			background-color: #0aad0a;
+			width: 4%;
+			cursor: pointer;
+			text-align: center;
+			font-size:20px
+		}
+
+	</style>
+</head> 
+<body onload="myfunction();"> 
+	<br>
+<div class="container">
+	<table style="width:50%">
+			<tr>
+				<td><img src="Image/babycarrot.png" alt="berry" width="40%" height="120px"></img>
+				</td>
+				<td><img src="Image/strawberry.png" alt="berry" width="40%" height="120px"></img></td>
+				<td><img src="Image/apple.png" alt="berry" width="30%" height="120px"></img></td>
+			</tr>
+			<tr>
+				<td><label id="lblCostCarrot">$8.75</label></td>
+				<td><label id="lblCostSberry">$3.25</label></td>
+				<td><label id="lblCostApple">$9.90</label></td>
+			</tr>
+			<tr>
+				<td><label id="lblDescpCarrot"></label>Farmer's Market Mini Carrot</td>
+				<td><label id="lblDescription"></label>Organic Strawberries</td>
+				<td><label id="lblDescApple"></label>President's Choice Organic Gala Apples</td>
+			</tr>
+		</table>
+		<div>
+			<label id="lblQtyCarrot"></label>
+			<button class="button" id="btnsub" onclick="Sub();">-</button>
+			<button class="button" id="btnadd" onclick="Add();">+</button>
+		</div>
+		<br>
+		<div>
+			<label id="lblTotalCostCarrot">$</label>
+			<input style="border: 1px solid #dee1e6;width: 80px"  type="text" id="Total"></input>
+		</div>
+
+
+</div>
+</body> 
+</html>

@@ -11,32 +11,18 @@
   function fncValidate()
   {
    var FirstName=document.getElementById("txtFirstName").value;
-   var LastName=document.getElementById("txtLastName").value;
-
-
-
    console.log(FirstName);
-   console.log(LastName);
+
 
    if(FirstName==""){
     document.getElementById("divErrorFirstName").style.display="block";
     document.getElementById("txtFirstName").focus();
+    document.getElementById("txtFirstName").style.borderColor="red";
     return false;
   }
   else{
    document.getElementById("divErrorFirstName").style.display="none";
  }
- if(LastName==""){
-   document.getElementById("divErrorLastName").style.display="block";
-   document.getElementById("txtLastName").focus();
-   return false;
- }
- else{
-  document.getElementById("divErrorLastName").style.display="none";
-}
-
-
-
 }
 </script>
 <meta charset="utf-8">  
@@ -52,7 +38,7 @@
 
   .container {
     padding: 16px;background: white;width: 43%;
-    margin-left: 80px;margin-top: 30px;height:800px;
+    margin-left: 80px;margin-top: 30px;height:860px;
     border-radius: 8px
   }
   .container1 {
@@ -75,7 +61,7 @@ img{margin-left: 200px;height:50px;
 </style>
 <body>
   <div class="imgcontainer">
-    <img style="width: 180px;height: 40px" src="image/quikpay-logo.png" alt="quickpay" class="quikpay">
+    <img style="width: 180px;height: 60px" src="image/quikpay-logo.png" alt="quickpay" class="quikpay">
   </div>
 
   <div class="container" style="float: left;">
@@ -85,59 +71,48 @@ img{margin-left: 200px;height:50px;
     <div class="row">
       <div class="col-md-6">
         <b><label id="lblFirstName">First Name<span style="color: red">*</span></label></b>
-        <input type="txt" maxlength="20"  class="form-control form-control-sm" id="txtFirstName" placeholder="">
+        <input type="text" maxlength="20"  id="txtFirstName" placeholder="">
         <div id="divErrorFirstName" style="display: none;border: red;">
           <label style="color: red;font-size: 12px;font-style: italic;">First name required
           </label>   
         </div>
       </div>
 
-      <div class="col-md-6">
+        <div class="col-md-6">
           <b><label id="lblLastName">Last Name<span style="color: red">*</span></label></b>
-          <input maxlength="20" type="text" class="form-control form-control-sm" id="txtLastName" placeholder="">
-        <div id="divErrorLastName" style="display: none;border: red;">
-          <label style="color: red;font-size: 12px;font-style: italic;">Last name required
-          </label>   
+          <input maxlength="20" type="txt" class="form-control" id="txtLastName" placeholder="">
         </div>
       </div>
-    </div>
       <br>
-
-    
-
 
       <div class="row">
         <div class="col-md-12">
           <b><label id="lblEmail">Email<span style="color: red">*</span></label></b>
-          <input maxlength="20" type="text" class="form-control form-control-sm" id="txtEmail" placeholder="email@domain.com">
-          <div id="divErrorFirstName" style="display: none;border: red;">
-          <label style="color: red;font-size: 12px;font-style: italic;">Email required
-          </label>   
-        </div>
+          <input maxlength="20" type="txt" class="form-control" id="txtEmail" placeholder="email@domain.com" oninput="fnCheck(this.value)">
         </div>
       </div>
       <br>
 
       <div class="row">
         <div class="col-md-4">
-          <b><label>Apt/Unit</label></b>
-          <input maxlength="5" type="text" class="form-control form-control-sm" id="inputAddress" placeholder="">
+          <b><label for="inputAddress">Apt/Unit</label></b>
+          <input maxlength="5" type="text" class="form-control" id="inputAddress" placeholder="">
         </div>
         <div class="col-md-8" >
-          <b><label id="lblStreet">Street Adress<span style="color: red">*</span></label></b>
-          <input maxlength="20" type="txt" class="form-control form-control-sm" id="txtStreetAddress" placeholder="123 Street Name">
+          <b><label id="lblStreet" for="inputAddress">Street Adress<span style="color: red">*</span></label></b>
+          <input maxlength="20" type="txt" class="form-control" id="txtStreetAddress" placeholder="123 Street Name">
         </div>
       </div>
       <br>
       <div class="row">
         <div class="col-md-6">
-          <b><label id="lblCity">City<span style="color: red">*</span></label></b>
-          <input maxlength="10" type="txt"class="form-control form-control-sm" id="txtCity" placeholder="">
+          <b><label id="lblCity" for="inputAddress">City<span style="color: red">*</span></label></b>
+          <input maxlength="10" type="txt" class="form-control" id="txtCity" placeholder="">
         </div>
 
         <div class="col-md-6">
-          <b><label id="lblProvince">Province<span style="color: red">*</span></label></b>
-          <select id="optionProvince" class="form-control form-control-sm" aria-label="Default select example">
+          <b><label id="lblProvince" for="inputState">Province<span style="color: red">*</span></label></b>
+          <select id="optionProvince" class="form-select" aria-label="Default select example">
             <option selected>Select One</option>
             <option value="1">AB</option>
             <option value="2">BC</option>
@@ -150,8 +125,8 @@ img{margin-left: 200px;height:50px;
 
       <div class="row">
         <div class="col-md-6">
-          <b><label id="lblCountry">Country<span style="color: red">*</span></label></b>
-          <select id="optionCountry"  class="form-control form-control-sm" aria-label="Default select example">
+          <b><label id="lblCountry" for="inputState">Country<span style="color: red">*</span></label></b>
+          <select id="optionCountry"  class="form-select" aria-label="Default select example">
             <option selected>Select One</option>
             <option value="1">Canada</option>
             <option value="2">United States</option>
@@ -160,20 +135,20 @@ img{margin-left: 200px;height:50px;
           </select>
         </div>
         <div class="col-md-6">
-          <b><label id="lblZip">Postal Code/Zip<span style="color: red">*</span></label></b>
-          <input maxlength="7" type="txt" class="form-control form-control-sm" id="txtPostalCode" placeholder="">
+          <b><label id="lblZip" for="inputAddress">Postal Code/Zip<span style="color: red">*</span></label></b>
+          <input maxlength="7" type="txt" class="form-control" id="txtPostalCode" placeholder="">
         </div>     
       </div>
       <br>
 
       <div class="row">
         <div class="col-md-6">
-          <b><label id="lblTelephone">Telephone Number</label></b>
-          <input maxlength="10" type="txt" class="form-control form-control-sm" id="inputAddress" placeholder="(999)999-9999">
+          <b><label id="lblTelephone" for="inputAddress">Telephone Number</label></b>
+          <input maxlength="10" type="txt" class="form-control" id="inputAddress" placeholder="(999)999-9999">
         </div>
         <div class="col-md-6">
-          <b><label id="lblMobile">Mobile Number<span style="color: red">*</span></label></b>
-          <input maxlength="10" type="txt" class="form-control form-control-sm" id="txtMobileNumber" placeholder="(999)999-9999">
+          <b><label id="lblMobile" for="inputAddress">Mobile Number<span style="color: red">*</span></label></b>
+          <input maxlength="10" type="txt" class="form-control" id="txtMobileNumber" placeholder="(999)999-9999">
         </div>
       </div>
       <br>
@@ -181,11 +156,11 @@ img{margin-left: 200px;height:50px;
       <div class="row">
         <div class="col-md-6">
           <b><label id="lblPassword" >Create Password*</label></b>
-          <input maxlength="20"  type="txt" class="form-control form-control-sm" id="txtCreatePassword" placeholder="@13eerrW">
+          <input maxlength="20"  type="txt" class="form-control" id="txtCreatePassword" placeholder="@13eerrW">
         </div>
         <div class="col-md-6">
-          <b><label id="lblCPassword">Confirm Password<span style="color: red">*</span></label></b>
-          <input maxlength="20" type="txt" class="form-control form-control-sm" id="txtConfirmPassword" placeholder="...">
+          <b><label id="lblCPassword" for="inputAddress">Confirm Password<span style="color: red">*</span></label></b>
+          <input maxlength="20" type="txt" class="form-control" id="txtConfirmPassword" placeholder="...">
         </div>
       </div>
       <br>
@@ -225,7 +200,7 @@ img{margin-left: 200px;height:50px;
       <div class="row">
         <div class="col-md-9">
           <b><label id="lblFirstName" >Email<span style="color: red">*</span></label></b>
-          <input type="txt" maxlength="20"  class="form-control form-control-sm" id="txtFirstName" placeholder="">    
+          <input type="txt" maxlength="20"  class="form-control" id="txtFirstName" placeholder="">    
         </div>
 
         <div class="col-md-3">
@@ -236,7 +211,7 @@ img{margin-left: 200px;height:50px;
       <div class="row">
        <div class="col-md-9">
         <b><label id="lblLastName">Password<span style="color: red">*</span></label></b><a href="#" style=" margin-left: 100px;color: #4b91f1;font-size: 14px">Forgot password?</a>
-        <input maxlength="20" type="txt" class="form-control form-control-sm" id="txtLastName" placeholder="">
+        <input maxlength="20" type="txt" class="form-control" id="txtLastName" placeholder="">
       </div>
       <div class="col-md-3">
       </div>

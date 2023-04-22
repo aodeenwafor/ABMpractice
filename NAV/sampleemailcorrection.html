@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+  function validateEmail() {
+    const email = document.getElementById("email").value;
+    const pattern = /@gmail\.com$/;
+
+    if (!pattern.test(email)) {
+      document.getElementById("error").innerHTML = "Please enter a valid Gmail address.";
+      return false;
+    }
+  }
+</script>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;
+      font-size:40px;
+    }
+
+
+</style>
+</head>
+<body>
+  
+  <input type="email" id="email" placeholder="Enter your email address">
+
+<button onclick="validateEmail()">Submit</button>
+
+<p id="error"></p>
+</body>
+
+</html>

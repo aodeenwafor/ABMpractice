@@ -1,16 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+  function fnValidate(){
+    var email=document.getElementById("Email").value;
+    var password=document.getElementById("Password").value;
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   console.log(email);
+   console.log(password);
+
+    if(email==""){
+      document.getElementById("divErrorEmail").style.display="block";
+      document.getElementById("divErrorEmail").style.color="red";
+      document.getElementById("Email").focus();
+      return false;
+      }
+    else{
+     document.getElementById("divErrorEmail").style.display="none";
+        }
+if(password==""){
+      document.getElementById("divErrorPassword").style.display="block";
+      document.getElementById("Password").focus();
+      return false;
+      }
+    else{
+     document.getElementById("divErrorPassword").style.display="none";
+        }
+
+
+{
+    const email = document.getElementById("Email").value;
+    const pattern = /@gmail\.com$/;
+   //regex (regular expression)
+    if (!pattern.test(Email)) {
+     document.getElementById("error").style.display="block";
+      return false;
+    }
+    else{
+  document.getElementById("error").style.display="none";
+  Proceed();
+       }
+  }
+    }
+</script>
 </head>
 <style>
-  body {font-family: Arial, Helvetica, sans-serif;background-color:#f1f1f1;
-    background-size: 100%; 
+  body {font-family: Arial, Helvetica, sans-serif;background-color:#dee1e6  ;
+    background-size: 100%;
   }
-  form {border: 3px solid #f1f1f1;}
-
+  #main {border: 3px solid #F1F1F1;}
   input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
@@ -19,9 +59,8 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
-
   button {
-    background-color: #003c58;
+    background-color: #003C58;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -29,16 +68,13 @@
     cursor: pointer;
     width: 100%;
   }
-
   button:hover {
     opacity: 0.8;
   }
-
   .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
   }
-
   .container {
     padding: 10px;
   }
@@ -54,7 +90,6 @@
     text-align: left;
     background: none; font-size: 11px;
   }
-
   @media screen and (max-width: 300px) {
     span.psw {
      display: block;
@@ -65,36 +100,52 @@
 </head>
 <body >
   <div>
-    <form  style="border-radius:15px; background-color: white;width: 500px;padding-top:15px; margin: 25px 150px 75px 100px;height: 530px; margin-left: 480px;margin-top: 40px;color:  #003c58">
+    <div class="main"  style="border-radius:15px; background-color: white;width: 500px;padding-top:15px; margin: 25px 150px 75px 100px;height: 530px; margin-left: 480px;margin-top: 40px;color:  #003C58">
       <div class="imgcontainer">
         <img src="image/quikpay-logo.png" alt="quickpay" class="quikpay">
       </div>
-
       <div class="container" style="margin-left: 70px">
         <div>
-          <label for="uname"><b>Email address</b></label><br>
-          <input style="border-radius:6px;width: 90%;" type="text" placeholder="" name="uname" required>
+          <label><b>Email address</b></label><br>
+          <input id="Email" style="border-radius:6px;width: 90%;height: 33px;border: solid  #CCCCCC 1px" type="email" placeholder="Email Address">
+          <div id="divErrorEmail" style="display: none;">
+        <label style="color: red;font-size: 12px;font-style: italic;">Email address required</label>
+        <div id="error" style="display: none;">
+        <label  style="color: red;font-size: 12px;font-style: italic;display: none;">Please use a valid email</label>
+      </div>
         </div><br>
         <div>
-          <label for="psw"><b>Password</b><a href="#" style=" margin-left: 150px;color: #4b91f1;font-size: 14px">Forgot password?</a></label><br>
-          <input style="border-radius:6px;width: 90%;" type="password" placeholder="" name="psw" required>
+          <label><b>Password</b><a href="#" style=" margin-left: 150px;color: #4B91F1;font-size: 14px">Forgot password?</a></label><br>
+          <input id="Password" style="border-radius:6px;width: 90%;" type="password" placeholder="Password" >
+          <div id="divErrorPassword" style="display: none";>
+        <label style="color: red;font-size: 12px;font-style: italic;">Incorrect password please try again</label>
         </div><br>
         <div>
           <label>
-            <input type="checkbox" name="remember"> Remember me
+            <input type="checkbox">Remember me
           </label>
         </div><br>
-
         <div>
-          <button type="submit" style="border-radius:6px;box-sizing:12px;background-color: #003c58;font-size: 15px;width: 90%;">Login</button>
+          <button style="border-radius:6px;box-sizing:12px;background-color: #003C58;font-size: 15px;width: 90%;" onclick="fnValidate();">Login</button>
         </div>
-
-        <p  style=" text-align:center;font-size: 14px">Dont have an account? 
-          <a href="#" style="color: #4b91f1;font-size: 14px">Sign up</a></p>
-        </form><br><br><br><br>
+        <p  style=" text-align:center;font-size: 14px">Dont have an account?
+          <a href="#" style="color: #4B91F1;font-size: 14px">Sign up</a></p>
+        </div><br><br><br><br>
         <div class="footer">
           <p>&#169; QuikPay Wallet 2023, designed by Adamma</p>
        </div>
      </div>
    </body>
    </html>
+
+
+
+
+
+
+
+
+
+
+
+

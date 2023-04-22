@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script >
+function fixAddress(){
+  var Adamma = document.getElementById("lblAdress").value.split(" ");
+  alert("Street No:" + Adamma[0]);
+  alert("Street Address: " + Adamma [1]+ " " +Adamma[2]);
+  alert("City:" + Adamma [3]);
+  alert("Province:" + Adamma [4]);
+ alert("Postal Code: " + Adamma [5]+ " " +Adamma[6]);
+}
+
+function myfunction(){
+  document.getElementById("lblAdress").innerHTML="123 Smith Street Calgary AB T4Y 5J2";
+  document.getElementById("lblAdress").value="123 Smith Street Calgary AB T4Y 5J2";
+}
+
+  </script>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;
+      font-size:40px;
+    }
+
+
+</style>
+</head>
+
+</html>

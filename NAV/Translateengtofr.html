@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+    <script>
+    function fncCallLang(){
+      document.getElementById("lblfirstName").innerHTML="First Name";
+      document.getElementById("lblLastName").innerHTML="Last Name";
+    }
+
+  function fncEng(){
+      document.getElementById("lblfirstName").innerHTML="First Name";
+      document.getElementById("lblLastName").innerHTML="Last Name";
+    }
+  function fncFr(){
+      document.getElementById("lblfirstName").innerHTML="Prénom";
+      document.getElementById("lblLastName").innerHTML="Nom de famille";
+    }
+
+   </script>
+</head>
+
+  <body onload="fncCallLang();">
+    <center>
+      <div id="MainDiv" style="width: 100%;height: 500px;">
+        <div id="Header" style="border: 1px solid black;">
+          <input type="button" onclick="fncEng();" value="English"></input>
+          <input type="button" onclick="fncFr();" value="French"></input>
+        </div>
+        <br>
+        <div id="Container" style="border: 0px solid black;">
+          <label id="lblfirstName"></label>
+          <input type="text" id="txtFirstName"></input>
+          <br>
+          <br>
+          <label id="lblLastName"></label>
+          <input type="text" id="txtLastName"></input>
+        </div>
+        <br>
+         <div id="Footer" style="border: 0px solid black;">
+           <p style="text-align: center;">Made by Adamma &#169;</p>
+         </div>
+      </div>
+    </center>
+
+  </body>
+</html>
+
+
+

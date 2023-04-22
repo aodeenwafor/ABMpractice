@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script >
+function AddHyphen(){ 
+	var num = document.getElementById("lblNum").value.substring(0,3);
+	var num1 = document.getElementById("lblNum").value.substring(3,6);
+	var num2 = document.getElementById("lblNum").value.substring(6,10);
+	var number =num +"-" + num1+"-"+ num2
+	document.getElementById("lblNum").innerHTML=number;
+}
+function myfunction(){
+	document.getElementById("lblNum").innerHTML="1234567890";
+	document.getElementById("lblNum").value="1234567890";
+}
+  </script>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;
+      font-size:100px;
+    }
+    
+
+</style>
+</head>
+<body onload="myfunction();">
+ <label id="lblNum"></label>
+  <button onclick="AddHyphen()">switch</button>
+    </body>
+    </html>

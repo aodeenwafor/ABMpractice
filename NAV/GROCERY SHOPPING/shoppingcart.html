@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script>
+		var count=0;
+		var cost=8.75;
+		function Add(){
+			count++;
+			document.getElementById("lblQtyCarrot").innerHTML=count;
+			document.getElementById("Total").value="$"+count*cost;
+			console.log(count);
+		}
+		function Sub(){
+			count--;
+			document.getElementById("lblQtyCarrot").innerHTML=count;
+			document.getElementById("Total").value="$"+count*cost;
+			console.log(count);
+		}
+		function myfunction(){
+			document.getElementById("lblQtyCarrot").innerHTML="";
+			document.getElementById("Total").innerHTML="$"+8.75;
+			   }
+	</script>
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif;font-size:18px
+		}
+		button{
+			border: none; 
+			border-radius: 16px;
+			background-color: #0aad0a;
+			width: 5%;
+			cursor: pointer;
+			text-align: center;
+			font-size:25px
+		}
+
+	</style>
+</head> 
+<body onload="myfunction();"> 
+	<br>
+<div class="container">
+	<table style="width:50%">
+			<tr>
+				<td><img src="Image/babycarrot.png" alt="berry" width="30%" height="120px"></img>
+				</td>
+			</tr>
+			<tr>
+				<td><label id="lblCostCarrot">$8.75</label></td>
+			</tr>
+			<tr>
+				<td><label id="lblDescpCarrot"></label>Farmer's Market Mini Carrot</td>
+			</tr>
+		</table>
+		<div>
+			
+			<button class="button" id="btnsub" onclick="Sub();">-</button>
+			<label id="lblQtyCarrot">0</label>
+			<button class="button" id="btnadd" onclick="Add();">+</button>
+		</div>
+		<br>
+		<div>
+			<label id="lblTotalCostCarrot">$0</label>
+			<input style="border: 1px solid #dee1e6"  type="text" id="Total"></input>
+		</div>
+
+	</table>
+</div>
+</body> 
+</html>

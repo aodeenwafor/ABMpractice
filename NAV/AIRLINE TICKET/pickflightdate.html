@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script>
+     function fncCheckDate(){
+      var DepartureDate=document.getElementById("DepartureDate").value;
+      var ArrivalDate=document.getElementById("ArrivaleDate").value;
+      const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      const day = ["Sunday","Tuesday","Wednesday","Thursday","Friday","Saturday","Monday"];
+       var a = new Date(DepartureDate);
+       let name = month[a.getMonth()];
+      //var a=Date.parse(ArrivalDate);
+      var d=Date.parse(DepartureDate);
+      //console.log("Date:"+d);
+      // we need to get a Date : 11 march 2023 ==> 11
+      // day Date  Month
+      document.getElementById("day").innerHTML=day[a.getDay()];
+      document.getElementById("Date").innerHTML=a.getDate()+1;
+      document.getElementById("Month").innerHTML=month[a.getMonth()];
+    }
+  </script>
+</head>
+<body>
+  <br>
+<div class="MainDiv">
+ <label>Departure Date</label>
+  <input type="date" id="DepartureDate">
+  <label>Arrival Date</label>
+  <input type="date" id="ArrivaleDate">
+  <button onclick="fncCheckDate()">Book Flight Now</button>
+  <div class="Heading">
+    <label style="color: #152C73;font-size: 24px;">Departing flights</label>
+  </div>
+  <div class="table">
+    <table style="border: 1px solid grey;height: 100px;width: 1000px;border-radius: 10px;">
+      <tr>
+        <td>
+          <label id="day" style="color: #152C73;font-weight: bold;"></label>
+          <br>
+         <label id="Date" style="color: #152C73;font-weight: bolder;font-size: 30px;margin-left: 50px;"></label>
+         <br>
+           <label id="Month" style="color: #152C73;font-weight: bold;"></label>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>

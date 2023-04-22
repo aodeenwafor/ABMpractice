@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script>
+    function fncCheckDate(){
+      var DepartureDate=document.getElementById("DepartureDate").value;
+      var ArrivalDate=document.getElementById("ArrivaleDate").value;
+      var a=Date.parse(ArrivalDate);
+      var d=Date.parse(DepartureDate);
+    
+      if((a<= d))
+      {
+      document.getElementById("DivError").style.display="block";
+      return false;
+      }
+      else{
+          document.getElementById("DivError").style.display="none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <label>Departure Date</label>
+  <input type="date" id="DepartureDate">
+  <label>Arrival Date</label>
+  <input type="date" id="ArrivaleDate">
+  <button onclick="fncCheckDate()">Book Flight Now</button>
+  <br>
+  <label id="DivError" style="color: red;font-size: 13px;display: none;"> Arrival Date should be greater than Departure Date</label>
+</body>
+</html>

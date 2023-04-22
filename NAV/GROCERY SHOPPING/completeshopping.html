@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script >
+      var count=0;
+      var count1=0;
+      var count2=0;
+      var count3=0;
+      var cost=1.00;
+      var costban=2.00;
+      var costgrp=3.00;
+      var costblk=4.00;
+      function myfunction(){
+      document.getElementById("lblQtyCarrot").innerHTML="";
+      document.getElementById("lblTotalCarrot").innerHTML="$"+1.00;
+      document.getElementById("lblQtyBanana").innerHTML="";
+      document.getElementById("lblTotalBanana").innerHTML="$"+2.00;
+      document.getElementById("lblQtyRedgrapes").innerHTML="";
+      document.getElementById("lblTotalRedgrapes").innerHTML="$"+3.00;
+      document.getElementById("lblQtyBlackberry").innerHTML="";
+      document.getElementById("lblTotalBlackberry").innerHTML="$"+4.00;
+         }
+      function Add(){
+      count++;
+      if(count >=1){
+         document.getElementById("btnsub").disabled=false;
+      }
+      document.getElementById("lblQtyCarrot").innerHTML=count;
+      document.getElementById("lblTotalCarrot").value=""+count*cost;
+     // console.log(count);
+      TotalCost();
+    }
+    function Sub(){
+      count--;
+      if(count <0){
+         document.getElementById("btnsub").disabled=true;
+         count=0;
+      }
+      document.getElementById("lblQtyCarrot").innerHTML=count;
+      document.getElementById("lblTotalCarrot").value=""+count*cost;
+      //console.log(count);
+     TotalCost();
+    }
+      function Add2(){
+      count1++;
+      if(count1 >=1){
+         document.getElementById("btnsub").disabled=false;
+      }
+      document.getElementById("lblQtyBanana").innerHTML=count1;
+      document.getElementById("lblTotalBanana").value=""+count1*costban;
+      TotalCost();
+     // console.log(count);
+    }
+    function Sub2(){
+      count1--;
+      if(count1 <0){
+         document.getElementById("btnsub").disabled=true;
+         count1=0;
+      }
+      document.getElementById("lblQtyBanana").innerHTML=count1;
+      document.getElementById("lblTotalBanana").value=""+count1*costban;
+        TotalCost();
+     // console.log(count);
+    }
+      function Add3(){
+      count2++;
+      if(count2 >=1){
+         document.getElementById("btnsub").disabled=false;
+      }
+      document.getElementById("lblQtyRedgrapes").innerHTML=count2;
+      document.getElementById("lblTotalRedgrapes").value=""+count2*costgrp;
+      TotalCost();
+     // console.log(count);
+    }
+    function Sub3(){
+      count2--;
+      if(count2 <0){
+         document.getElementById("btnsub").disabled=true;
+         count2=0;
+      }
+      document.getElementById("lblQtyRedgrapes").innerHTML=count2;
+      document.getElementById("lblTotalRedgrapes").value=""+count2*costgrp;
+      TotalCost();
+     // console.log(count);
+    }
+    function Add4(){
+      count3++;
+      if(count3 >=1){
+         document.getElementById("btnsub").disabled=false;
+      }
+      document.getElementById("lblQtyBlackberry").innerHTML=count3;
+      document.getElementById("lblTotalBlackberry").value=""+count3*costblk;
+       TotalCost();
+     // console.log(count);
+    }
+    function Sub4(){
+      count3--;
+      if(count3 <0){
+         document.getElementById("btnsub").disabled=true;
+         count3=0;
+      }
+      document.getElementById("lblQtyBlackberry").innerHTML=count3;
+      document.getElementById("lblTotalBlackberry").value=""+count3*costblk;
+      TotalCost();
+     // console.log(count);
+    }
+      function TotalCost(){
+      var carrot =document.getElementById("lblTotalCarrot").value;
+   var banana = document.getElementById("lblTotalBanana").value;
+    var grapes =document.getElementById("lblTotalRedgrapes").value;
+   var berry = document.getElementById("lblTotalBlackberry").value;
+  var sum=Number(carrot)+Number (banana)+Number(grapes)+Number(berry);
+  document.getElementById("lblTotalCost").innerHTML = sum;
+    }
+     function PlaceOrder(){
+      console.log("Thanks for shopping");
+    }
+  </script>
+<style>
+* {
+  box-sizing: border-box;
+}
+.row {
+  margin-left:-5px;
+  margin-right:-100px;
+}
+   img{float:left;height:120px;
+    width: 45%
+   }
+.column {
+  float: left;
+  width: 50%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: none;
+}
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+</style>
+</head>
+<body onload="myfunction();">
+<div class="row">
+  <div class="column">
+    <table>
+      <tr>
+          <th style="width: 10%" ><input type="checkbox" id="lblAllcheck" value=""><span class="checkmark"></span><label>All</label>
+          </th>
+          <th><label id="lblItem"></label>Item</th>
+          <th><label id="iblPrice"></label>Price</th>
+          <th style="width: 160px"><label id="lblQty"></label>Qty</th>
+          <th><label id="lblSubtotal"></label>Subtotal</th>
+      </tr>
+      <tr>
+          <td style="width: 5px"><input class="checkmark"  type="checkbox" id="Carrotcheck"
+                        value="" onchange="TotalCost();">
+                      </td>
+                      <td style="width: 250px;">
+                        <img src="Image/babycarrot.png" alt="car"></img><br>
+                        <label id="lblCarrot">Farmers Market Baby Carrots</label>
+                      </td>
+                      <td><label id="lblCarrotCost"></label>$1.00</td>
+                      <td><button class="button" id="btnsub" onclick="Sub();">-</button>
+                        <label id="lblQtyCarrot">1</label>
+                        <button class="button" id="btnadd" onclick="Add();">+</button>
+                      </td>
+                      <td><label id="Carrot" type="text">$</label>
+                        <input style="border:none;width: 35px;"  type="text" id="lblTotalCarrot"></input>
+          </td>
+      </tr>
+      <tr>
+        <td style="width: 5px"><input class="checkmark"  type="checkbox" id="Bananacheck"
+                        value="" onchange="TotalCost();">
+                      </td>
+                      <td><img src="Image/banana.png" alt="ban"></img><br>
+                        <label id="lblBanana"></label>President's Choice Organic Banana</label>
+                      </td>
+                      <td><label id="lblBananaCost"></label>$2.00</td>
+                      <td><button class="button" id="btnsub2" onclick="Sub2();">-</button>
+                        <label id="lblQtyBanana">1</label>
+                        <button class="button" id="btnadd2" onclick="Add2();">+</button>
+                      </td>
+                      <td><label id="Banana" type="text">$</label>
+                        <input style="border:none;width: 35px;"  type="text" id="lblTotalBanana"></input>
+                      </td>
+      </tr>
+      <tr>
+        <td style="width: 5px"><input class="checkmark"  type="checkbox" id="Grapescheck"
+                        value="" onchange="TotalCost();">
+                      </td>
+                      <td><img src="Image/redgrapes.png" alt="gra"></img><br>
+                       <label id="lblRedgrapes"></label>Red Seedless Grapes</label>
+                     </td>
+                     <td><label id="lblRedgrapesCost"></label>$3.00</td>
+                     <td><button class="button" id="btnsub3" onclick="Sub3();">-</button>
+                      <label id="lblQtyRedgrapes">1</label>
+                      <button class="button" id="btnadd3" onclick="Add3();">+</button>
+                    </td>
+                    <td><label id="Redgrapes" type="text">$</label>
+                      <input style="border:none;width: 35px;"  type="text" id="lblTotalRedgrapes"></input>
+                    </td>
+      </tr>
+      <td style="width: 5px"><input class="checkmark"  type="checkbox" id="Berrycheck"
+                      value="" onchange="TotalCost();">
+                    </td>
+                    <td><img src="Image/blackberry.png" alt="berry"></img>
+                      <br>
+                      <label id="lblBlackberry"></label>Organic Blackberries 1/2 pint</label>
+                    </td>
+                    <td><label id="lblBlackberryCost"></label>$4.00</td>
+                    <td><button class="button" id="btnsub4" onclick="Sub4();">-</button>
+                      <label id="lblQtyBlackberry">1</label>
+                      <button class="button" id="btnadd4" onclick="Add4();">+</button>
+                    </td>
+                    <td><label id="Blackberry" type="text">$</label>
+                      <input style="border:none;width: 35px;"  type="text" id="lblTotalBlackberry"></input>
+                    </td>
+    </table>
+  </div>
+  <div class="column">
+    <table>
+      <tr>
+        <th><label id="lblTotal">Order Total</label></th>
+      </tr>
+      <tr>
+        <td><label id="lblTotalCost">$</label></td>
+      </tr>
+      <tr>
+        <td><button class="button"  onclick="PlaceOrder();" style="width: 30%;background-color:black;color: white; padding: 10px;border-radius: 5px;">Place order</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>

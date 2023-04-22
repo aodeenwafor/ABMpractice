@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script>
+		var count=0;
+		var cost=8.75;
+		function Add(){
+			count++;
+			document.getElementById("lblQtyCarrot").innerHTML=count;
+			document.getElementById("Total").value="$"+count*cost;
+			console.log(count);
+		}
+		function Sub(){
+			count--;
+			document.getElementById("lblQtyCarrot").innerHTML=count;
+			document.getElementById("Total").value="$"+count*cost;
+			console.log(count);
+		}
+		function myfunction(){
+			document.getElementById("lblQtyCarrot").innerHTML="";
+			document.getElementById("Total").innerHTML="$"+8.75;
+			   }
+	</script>
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif;font-size:15px
+		}
+		button{
+			border: none; 
+			border-radius: 16px;
+			background-color: #0aad0a;
+			width: 4%;
+			cursor: pointer;
+			text-align: center;
+			font-size:20px
+		}
+		.previous {
+  background-color: #3ac5ee;
+  color: black;
+}
+
+.next {
+  background-color: #3ac5ee;
+  color: black;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+	</style>
+</head> 
+<body onload="myfunction();"> 
+	<br>
+<div class="container">
+	<table style="width:80%">
+			<tr>
+				<div class="btn-container">
+					<td><a href="#" class="next">&laquo; Previous</a></td>
+				</div>
+				<td><img src="Image/babycarrot.png" alt="berry" width="40%" height="120px"></img>
+				</td>
+				<td><img src="Image/redgrapes.png" alt="berry" width="40%" height="120px"></img></td>
+				<td><img src="Image/banana.png" alt="berry" width="40%" height="120px"></img></td>
+				<td><img src="Image/grapes.png" alt="berry" width="40%" height="120px"></img></td>
+				<td><img src="Image/blackberry.png" alt="berry" width="40%" height="120px"></img></td>
+			<td><a href="#" class="next">Next &raquo;</a></td>
+			</tr>
+			
+			<tr>
+				<td><label id="lblCostCarrot">$4.75</label></td>
+				<td><label id="lblCostSberry">$9.50</label></td>
+				<td><label id="lblCostApple">$2.80</label></td>
+				<td><label id="lblCostSberry">$7.25</label></td>
+				<td><label id="lblCostApple">$6.50</label></td>
+			</tr>
+			<tr>
+				<td><label id="lblDescpCarrot"></label>Mini Carrots</td>
+				<td><label id="lblDescription"></label>Seedless Grapes</td>
+				<td><label id="lblDescApple"></label>Organic Banana</td>
+				<td><label id="lblDescription"></label>Green Grapes</td>
+				<td><label id="lblDescApple"></label>Organic Blackberry/td>
+			</tr>
+		</table>
+		<div>
