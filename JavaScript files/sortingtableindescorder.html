@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorted Array Table</title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <table border="0">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>City</th>
+        </tr>
+        <?php
+       
+        $people = array(
+            array("Name" => "Basant", "Age" => 29, "Gender" => "Male", "City" => "Calgary"),
+            array("Name" => "Adamma", "Age" => 29, "Gender" => "Female", "City" => "Calgary"),
+            array("Name" => "Castro", "Age" => 30, "Gender" => "Male", "City" => "Edmonton")
+        );
+
+   
+        usort($people, function($a, $b) {
+            if ($a['Age'] == $b['Age']) {
+                return strcmp($b['Name'], $a['Name']); 
+            }
+            return $b['Age'] - $a['Age']; 
+        });
+
+        
+        foreach ($people as $person) {
+            echo "<tr>";
+            echo "<td>{$person['Name']}</td>";
+            echo "<td>{$person['Age']}</td>";
+            echo "<td>{$person['Gender']}</td>";
+            echo "<td>{$person['City']}</td>";
+            echo "</tr>";
+        }
+        ?>
+    </table>
+</body>
+</html>

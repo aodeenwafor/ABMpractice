@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Menu</title>
+</head>
+<body>
+    <h1>Security Based Binding Menu</h1>
+    <label for="username">Username: </label>
+    <input type="text" id="username" placeholder="username"><br><br>
+    <label for="username">Password: </label>
+    <input type="text" id="password" placeholder="password"><br><br>
+    <button onclick="populateMenu()">Login</button>
+
+    <ul id="menu">
+        <!-- Menu items will be added here -->
+    </ul>
+
+    <div id="errorMessage" style="color: red;"></div>
+
+    <script>
+        function populateMenu() {
+            var username = document.getElementById("username").value;
+            var menuList = document.getElementById("menu");
+            var errorMessage = document.getElementById("errorMessage");
+
+            // Clear existing menu items
+            menuList.innerHTML = "";
+            errorMessage.innerHTML = "";
+
+            // Check if the user is Basant (instructor) or Ada (student)
+            if (username.toLowerCase() === "basant") {
+                var menuItems = ["Home", "Contact", "About Us", "Career"];
+            } else if (username.toLowerCase() === "ada") {
+                var menuItems = ["Home", "Contact", "About Us"];
+            } else {
+                errorMessage.innerHTML = "Invalid username. Please enter 'Basant' or 'Ada'.";
+                return;
+            }
+
+            // Populate the menu with menu items
+            for (var i = 0; i < menuItems.length; i++) {
+                var menuItem = document.createElement("li");
+                menuItem.textContent = menuItems[i];
+                menuList.appendChild(menuItem);
+            }
+        }
+    </script>
+</body>
+</html>

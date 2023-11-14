@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script >
+		var intEnglishTotalMarks=100;
+        var intMathsTotalMarks=100;
+		var intBiologyTotalMarks=100;
+		var intChemistryTotalMarks=100;
+		var intCommerceTotalMarks=100;
+		var intPhysicsTotalMarks=100;
+        
+        var intEnglishFT=78;
+        var intMathsFT=80;
+		var intBiologyFT=72;
+		var intChemistryFT=78;
+		var intCommerceFT=75;
+		var intPhysicsFT=70;
+
+
+		function fncfillTotalMarks(){
+		document.getElementById("lblEnglishTotalMarks").innerHTML=intEnglishTotalMarks;
+		document.getElementById("lblMathsTotalMarks").innerHTML=intMathsTotalMarks;
+		document.getElementById("lblBiologyTotalMarks").innerHTML=intBiologyTotalMarks;
+		document.getElementById("lblChemistryTotalMarks").innerHTML=intChemistryTotalMarks;
+		document.getElementById("lblCommerceTotalMarks").innerHTML=intCommerceTotalMarks;
+		document.getElementById("lblPhysicsTotalMarks").innerHTML=intPhysicsTotalMarks;
+
+        var sum=(intEnglishTotalMarks)+(intBiologyTotalMarks)+(intChemistryTotalMarks)+(intMathsTotalMarks)+(intCommerceTotalMarks)+(intPhysicsTotalMarks)
+		 document.getElementById("lblTMfirstT").innerHTML = sum;
+
+         document.getElementById("lblEnglishFT").innerHTML=intEnglishFT;
+		document.getElementById("lblMathsFT").innerHTML=intMathsFT;
+		document.getElementById("lblBiologyFT").innerHTML=intBiologyFT;
+		document.getElementById("lblChemistryFT").innerHTML=intChemistryFT;
+		document.getElementById("lblCommerceFT").innerHTML=intCommerceFT;
+		document.getElementById("lblPhysicsFT").innerHTML=intPhysicsFT;
+
+        var sum=(intEnglishFT)+(intMathsFT)+(intBiologyFT)+(intChemistryFT)+(intCommerceFT)+(intPhysicsFT)
+          document.getElementById("lblTOMFirstT").innerHTML = sum;
+
+          fncGrades();
+		}
+
+           function fncGrades(){
+
+			if(intEnglishFT >= 75){
+				document.getElementById("EnglishFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("EnglishFTStatus").innerHTML="Fail";
+			}
+             if(intMathsFT >= 75){
+				document.getElementById("MathsFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("MathsFTStatus").innerHTML="Fail";
+			}
+
+            if(intBiologyFT >= 75){
+				document.getElementById("BiologyFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("BiologyFTStatus").innerHTML="Fail";
+			}
+            if(intChemistryFT >= 75){
+				document.getElementById("ChemistryFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("ChemistryFTStatus").innerHTML="Fail";
+			}
+             if(intCommerceFT>= 75){
+				document.getElementById("CommerceFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("CommerceFTStatus").innerHTML="Fail";
+			}
+          if(intPhysicsFT>= 75){
+				document.getElementById("PhysicsFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("PhysicsFTStatus").innerHTML="Fail";
+			}
+
+		}
+
+
+	</script>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;font-size: 15px;
+    }
+    table,  td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th{
+        border: 1px solid white;
+      border-collapse: collapse;
+    }
+    .container{padding: 20px;
+     margin-left: 80px;
+     margin-right: 100px;width: 70%;
+    
+     background-color: white;
+     border-radius: 5px;
+   }
+   th {
+  
+    background-color: #FF2B2B;color: white;
+  }
+  th, td {
+    padding: 15px;
+    text-align: center;
+  }
+</style>
+</head>
+<body onload="fncfillTotalMarks();">
+  <div class="container">
+    
+    <table style="width:100%">
+        <tr>
+            <b></b><th colspan="7" style="text-align: left;">Candidate Tracker Template</th>
+          
+          </tr>
+
+        <tr>
+            <b></b><th colspan="3" style="text-align: right;">Position:</th>
+            <b></b><th colspan="4">Software Engineer</th>
+          </tr>
+         
+      <tr>
+        <th>App ID</th>
+        <th>Name of Candidate</th>
+        <th >Qualification</th>
+        <th>Behavioral Score</th>
+        <th >Competence Score</th>
+        <th>Total/ Rank %</th>
+        <th >Decision</th>
+      </tr>
+      <tr>
+        <td style="text-align: left">1<b></td>
+          <td><label id="lblTotalMarksFirstT"></label>Leroy King </td>
+          <td><label id="lblObtMarksFirstT"></label>Software Engineer</td>
+          <td>80</td>
+          <td><label id="lblTotalMarksSecondT"></label>80</td>
+          <td><check id="lblObtMarksSecondT"></label>80</td>
+          <td>Refused</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">2</td>
+          <td><label id="lblTotalMarksFirstT"></label>Mary Light</td>
+          <td><label id="lblObtMarksFirstT"></label>Computer Science</td>
+          <td>80</td>
+          <td><label id="lblTotalMarksSecondT"></label>80</td>
+          <td><label id="lblObtMarksSecondT"></label>88</td>
+          <td>Refused</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">3</td>
+          <td><label id="lblTotalMarksFirstT"></label>Debbie Brat</td>
+          <td><label id="lblObtMarksFirstT"></label>Software Engineer</td>
+          <td>80</td>
+          <td><label id="lblTotalMarksSecondT"></label>80</td>
+          <td><label id="lblObtMarksSecondT"></label>80</td>
+          <td>Refused</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">4</td>
+            <td><label id="lblTotalMarksFirstT"></label>James Smith</td>
+          <td><label id="lblObtMarksFirstT"></label>Software Developer</td>
+          <td>80</td>
+          <td><label id="lblTotalMarksSecondT"></label>80</td>
+          <td><label id="lblObtMarksSecondT"></label>92</td>
+          <td>Hired</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">5</td>
+          <td><label id="lblTotalMarksFirstT"></label>Will Smith</td>
+          <td><label id="lblObtMarksFirstT"></label>Software Engineer</td>
+          <td>80</td>
+          <td><label id="lblTotalMarksSecondT"></label>80</td>
+          <td><label id="lblObtMarksSecondT"></label>75</td>
+          <td>Refused</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">6</td>
+          <td><label id="lblTotalMarksFirstT"></label>Lizo Lizo</td>
+          <td><label id="lblObtMarksFirstT"></label>Computer Science</td>
+          <td>80</td>
+          <td><label id="lblTotalMarksSecondT"></label>80</td>
+          <td><label id="lblObtMarksSecondT"></label>60</td>
+          <td>Refused</td>
+        </tr>
+        <tr>
+          <td style="text-align: left"></td>
+          <td><label id="lblTotalMarksFirstT"></label></td>
+          <td><label id="lblObtMarksFirstT"></label></td>
+          <td></td>
+          <td><label id="lblTotalMarksSecondT"></label></td>
+          <td><label id="lblObtMarksSecondT"></label></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">
+            <label id="Total"><b></label>
+            </td>
+            <td><label id="lblTotalMarksFirstT"></label></td>
+          <td><label id="lblObtMarksFirstT"></label></td>
+          <td></td>
+          <td><label id="lblTotalMarksSecondT"></label></td>
+          <td><label id="lblObtMarksSecondT"></label></td>
+          <td></td>
+          </tr>
+
+
+        </table>
+        <br>
+        <button style="background-color: #FF2B2B;width: 140px;color: white;font-size: 14px;border-radius: 3px;
+        border: none;padding: 15px;float: right;"> Get Benefits</button>
+      </div>
+    </body>
+    </html>

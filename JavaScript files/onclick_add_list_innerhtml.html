@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button and List Example</title>
+</head>
+<body>
+    <button onclick="populateList()">Click me</button>
+    <ul id="menuList"></ul>
+
+    <script>
+        function populateList() {
+            var menuItems = ["Home", "Contact", "Career"];
+            var list = document.getElementById("menuList");
+
+            // Clear any existing items in the list
+            list.innerHTML = "";
+
+            // Add menu items to the list
+            for (var i = 0; i < menuItems.length; i++) {
+                var listItem = document.createElement("li");
+                listItem.textContent = menuItems[i];
+                list.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+</html>

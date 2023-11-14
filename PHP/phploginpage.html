@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+body {font-family: "Lucida Console", "Courier New";background-image: linear-gradient(to top right,#5ed1dc, #c033db);}
+
+form {border: none;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-image: linear-gradient(to right,#5ed1dc, #c033db);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+a {
+  text-decoration: none;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+}
+</style>
+</head>
+<body >
+
+
+ <div class="container" style="border-radius:20px; background-color: white;width: 400px;padding-top:25px; margin: 25px 150px 75px 100px;height: 550px; margin-left: 500px;margin-top: 60px">
+
+ 
+<form>
+    <h2 style="text-align:center";>Login</h2>
+
+  <div class="container" style="border-radius:3px; color: #4e4f53;">
+    <label for="uname"><b>Username</b></label>
+    <input style="border-radius:6px;" type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input style="border-radius:6px;" type="password" placeholder="Enter Password" name="psw" required>
+
+    <div>
+      <span class="psw"><a href="#" style="font-size: 14px">Forgot password?</a></span>
+    </div>
+        
+    <button type="submit" style="border-radius:18px;box-sizing:12px;font-size: 15px;">LOGIN</button>
+    <label>
+      <input type="checkbox"  name="remember" > Remember me
+    </label>
+  </div>
+
+  
+</form>
+
+</body>
+</html>

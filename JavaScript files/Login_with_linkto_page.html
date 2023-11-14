@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login</title>
+</head>
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input {
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+    font-size: 25px;
+
+}
+
+ul li a {
+    text-decoration: none;
+    color: black;
+}
+</style>
+<body>
+    <div id="loginForm">
+        <h1>Login Page</h1>
+        <br>
+        <form id="login" action="#">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>
+            <button type="button" id="loginButton" style="width: 20%;background-color:  #003c58;color: white;padding: 15px 32px;font-size: 20px;">Login</button>
+        </form>
+    </div>
+
+    <div id="menu" style="display: none;">
+        <h2>Menu</h2>
+        <ul >
+            <li><a href="home.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function () {
+            document.getElementById("loginForm").style.display = "block";
+            document.getElementById("menu").style.display = "block";
+        });
+    </script>
+</body>
+</html>

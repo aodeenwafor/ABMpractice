@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script>
+ function changeColor() { 
+document.getElementById("RedDiv").style.backgroundColor ="blue"; 
+} 
+function RedColor(){ 
+document.getElementById('RedDiv').style.backgroundColor ="red";
+ }
+ function changeColor1() { 
+document.getElementById("BlueDiv").style.backgroundColor ="green"; 
+} 
+function BlueColor(){ 
+document.getElementById('BlueDiv').style.backgroundColor ="blue";
+ }
+
+ function changeColor2() { 
+document.getElementById("GreenDiv").style.backgroundColor ="yellow"; 
+} 
+function GreenColor(){ 
+document.getElementById('GreenDiv').style.backgroundColor ="green";
+ }
+ function changeColor3() { 
+document.getElementById("YellowDiv").style.backgroundColor ="red"; 
+} 
+function YellowColor(){ 
+document.getElementById('YellowDiv').style.backgroundColor ="yellow";
+ }
+</script> 
+</head> 
+<body> 
+	<br>
+	<div class="container">
+	 <div class="form-row">
+		<div class="form-group col-md-3">
+			<div id="RedDiv" style="height: 100px; width: 100px; background-color: red;"></div>
+			<br>
+			<button style="width: 100px"  onclick="changeColor()">Red Box</button> 
+			<br>
+			<br>
+			<input style="width: 100px" type="text" onkeypress="RedColor()"/>
+        </div>
+       <div class="form-group col-md-3">
+	        <div id="BlueDiv" style="height: 100px; width: 100px; background-color: blue;"></div>
+			<br>
+			<button style="width: 100px"  onclick="changeColor1()">Blue Box</button> 
+			<br>
+			<br>
+			<input style="width: 100px" type="text" onkeypress="BlueColor()"/>
+       </div> 
+
+       <div class="form-group col-md-3">
+	        <div id="GreenDiv" style="height: 100px; width: 100px; background-color: green;"></div>
+			<br>
+			<button style="width: 100px"  onclick="changeColor2()">Green Box</button> 
+			<br>
+			<br>
+			<input style="width: 100px" type="text" onkeypress="GreenColor()"/>
+        </div>
+        <div class="form-group col-md-3">
+	        <div id="YellowDiv" style="height: 100px; width: 100px; background-color: yellow;"></div>
+			<br>
+			<button style="width: 100px"  onclick="changeColor3()">Yellow Box</button> 
+			<br>
+			<br>
+			<input style="width: 100px" type="text" onkeypress="YellowColor()"/>
+        </div>
+    </div>
+  </div>
+</body> 
+</html>

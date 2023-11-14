@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Text Boxes</title>
+</head>
+<body>
+    <input type="number" id="numTextBoxes" placeholder="Enter a number">
+    <button id="createBtn">Create Text Boxes</button>
+    <div id="textBoxContainer"></div>
+    <button id="printBtn">Print Texts</button>
+    <div id="output"></div>
+
+    <script>
+        const createBtn = document.getElementById("createBtn");
+        const printBtn = document.getElementById("printBtn");
+        const textBoxContainer = document.getElementById("textBoxContainer");
+        const output = document.getElementById("output");
+
+        createBtn.addEventListener("click", function() {
+            const numTextBoxes = parseInt(document.getElementById("numTextBoxes").value);
+
+            // Clear previous text boxes
+            textBoxContainer.innerHTML = "";
+
+            for (let i = 0; i < numTextBoxes; i++) {
+                const textBox = document.createElement("input");
+                textBox.type = "text";
+                textBox.id = `textBox${i}`;
+                textBox.placeholder = `Text ${i + 1}`;
+                textBoxContainer.appendChild(textBox);
+            }
+        });
+
+        printBtn.addEventListener("click", function() {
+            output.innerHTML = "";
+
+            const textBoxes = document.querySelectorAll('input[type="text"]');
+            const texts = [];
+
+            textBoxes.forEach(textBox => {
+                texts.push(textBox.value);
+            });
+
+            const horizontalList = texts.join(", ");
+            output.innerHTML = horizontalList;
+        });
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Box and Button Example</title>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Type something">
+    <button id="submitButton">Submit</button>
+    <p id="outputLabel"></p>
+
+    <script>
+       
+        const textInput = document.getElementById('textInput');
+        const submitButton = document.getElementById('submitButton');
+        const outputLabel = document.getElementById('outputLabel');
+
+      
+        submitButton.addEventListener('click', () => {
+       
+            const inputText = textInput.value;
+
+            outputLabel.textContent = inputText;
+
+      
+            textInput.value = '';
+        });
+    </script>
+</body>
+</html>

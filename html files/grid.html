@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto ;
+  gap: 10px;
+  background-color: #c1c1c1;
+  padding: 10px;
+  grid-template-rows: 150px 300px 250px;
+  border: 2px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  padding: 20px 0;
+  font-size: 15px;
+}
+
+.item1 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+</style>
+</head>
+<body>
+
+<h1>Grid Lines</h1>
+
+<div class="grid-container">
+  <div class="item1">
+    <h3>Orders</h3>
+    <table style="width:100%">
+        <tr>
+          <th style="text-align: left">Name: James Smith</th>
+          <th colspan="3">1st Term Exam</th>
+          <th colspan="3">2nd Term Exam</th>
+          <th colspan="3">Final Term Exam</th>
+        </tr>
+        <tr>
+          <td style="text-align: left"><b>Subject<b></td>
+            <td><label id="lblTotalMarksFirstT"></label>Total Marks</td>
+            <td><label id="lblObtMarksFirstT"></label>Obt Marks</td>
+            <td>Status</td>
+            <td><label id="lblTotalMarksSecondT"></label>Total Marks</td>
+           
+          </tr>
+          </table>
+  </div>
+
+  <div class="item2">
+    <table style="width:100%">
+        <tr>
+          <th style="text-align: left">Name: James Smith</th>
+          <th>1st Term Exam</th>
+          <th>2nd Term Exam</th>
+          <th>Final Term Exam</th>
+        </tr>
+<tr>
+          <td style="text-align: left"><b>Subject<b></td>
+            <td><label id="lblTotalMarksFirstT"></label>Total Marks</td>
+            <td><label id="lblObtMarksFirstT"></label>Obt Marks</td>
+            <td>Status</td>
+            <td><label id="lblTotalMarksSecondT"></label>Total Marks</td>
+           
+          </tr>
+          </table>
+    2</div>
+  <div class="item3">3</div>  
+  <div class="item4">4</div>
+  <div class="item5">5</div>
+
+
+</div>
+
+<p></p>
+
+</body>
+</html>
+
+

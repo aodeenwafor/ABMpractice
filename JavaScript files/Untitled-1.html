@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="login.php" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Login">
+    </form>
+    
+    <?php
+// Define the expected username and password
+$expected_username = "your_username";
+$expected_password = "your_password";
+
+// Retrieve user input from the form
+$user_input_username = $_POST['username'];
+$user_input_password = $_POST['password'];
+
+// Check if the user input matches the expected credentials
+if ($user_input_username === $expected_username && $user_input_password === $expected_password) {
+    // Authentication successful
+    // You can redirect the user to a dashboard or another page here
+    echo "Authentication successful!";
+} else {
+    // Authentication failed
+    // You can display an error message or redirect to a login error page
+    echo "Authentication failed. Please check your username and password.";
+}
+?>
+
+   
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Text Boxes</title>
+</head>
+<body>
+
+<h2>Enter a number and click the button:</h2>
+<input type="text" id="numInput" placeholder="Enter a number">
+
+<button style ="margin-right: 84px;border-radius: 4px;" onclick="createTextboxes()">Button</button>
+
+<div id="textBoxContainer">
+</div>
+
+<script>
+function createTextboxes() {
+  var num = parseInt(document.getElementById("numInput").value);
+  var container = document.getElementById("textBoxContainer");
+  
+  
+  container.innerHTML = '';
+
+  for (var i = 1; i <= num; i++) {
+    var textBox = document.createElement("input");
+    textBox.type = "text";
+    textBox.id = "textbox" + i;
+    textBox.placeholder = "Text Box " + i;
+    container.appendChild(textBox);
+    container.appendChild(document.createElement("br")); 
+    
+  }
+}
+</script>
+
+</body>
+</html>

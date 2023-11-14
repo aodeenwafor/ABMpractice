@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text Box List</title>
+</head>
+<body>
+
+<h2> Create List</h2>
+
+<input type="text" id="textbox1"><br><br>
+<input type="text" id="textbox2"><br><br>
+<input type="text" id="textbox3"><br><br>
+<input type="text" id="textbox4"><br><br>
+<input type="text" id="textbox5"><br><br>
+
+<button onclick="createList()">submit button</button><br><br>
+
+<div id="output"></div>
+
+<script>
+function createList() {
+  let outputDiv = document.getElementById("output");
+  let textList = [];
+
+  for (let i = 1; i <= 5; i++) {
+    let textBox = document.getElementById("textbox" + i);
+    textList.push(textBox.value);
+  }
+
+  let listHTML = textList.join(', ');
+  outputDiv.innerHTML = listHTML;
+}
+</script>
+
+</body>
+</html>

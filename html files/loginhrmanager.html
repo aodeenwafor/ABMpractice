@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.input-container {
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  margin-bottom: 15px;
+  margin-left: 80px;
+  
+}
+
+.icon {
+  padding: 10px;
+  background: #FF2B2B;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+.input-field:focus {
+  border: 2px solid #FF2B2B;
+}
+
+.btn {
+  background-color: #FF2B2B;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 70%;
+  margin: auto;
+
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+   size: 80px;
+  }
+.container {
+    padding: 10px;
+   
+  }
+  .main {border: 3px solid #FF2B2B;
+ 
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: none;
+    box-sizing: border-box;
+    background-image: linear-gradient(white, #FF2B2B);
+  }
+  .header{
+    background-color: #FF2B2B;
+    color: white;
+ padding: 5px 10px 15px;
+  }
+</style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="image/credarrow.jpg" alt="sv" style="float: left;width: 50px;padding-left: 1px;padding-top: 0px;margin-left: 40px;">
+        <h4 style="margin-left: 100px;">RED ARROW SUPPORT SERVICES</h4>
+</div>
+
+    <div class="main"  style="border-radius:15px; background-color: rgb(238, 134, 134);width: 500px;padding-top:15px; 
+    margin: 25px 150px 75px 100px;height: 420px; margin-left: 480px;margin-top: 40px;">
+    
+
+        
+          <form style="max-width:500px;margin:auto">
+            <div class="imgcontainer">
+                    <img src="image/sv.jpg" alt="sv">
+           </div>
+            <div class="input-container">
+                <i class="fa fa-user icon"></i>
+                <input class="input-field" type="text" placeholder="Username" name="usrnm">
+            </div>
+
+            <div class="input-container">
+                <i class="fa fa-lock icon"></i>
+                <input class="input-field" type="text" placeholder="Password" name="email">
+            </div>
+            
+            <button type="submit" class="btn btn-default" style="margin-left: 80px;">
+                <span class="glyphicon glyphicon-log-in" style= "float:left";></span>Log In</button>
+                <br>
+             
+            <div>
+                    <span class="psw"><a href="#" style="font-size: 15px;color: white;margin-left: 80px;">Forgot your password?</a></span>
+             </div>
+        </form>
+    
+    </div>
+</body>
+</html>

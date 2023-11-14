@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Generator</title>
+</head>
+<body>
+    <h1>Welcome to the Website</h1>
+    <button id="generateMenu">Generate Menu</button>
+    <ul id="menuList">
+        <!-- This list will be populated dynamically -->
+    </ul>
+
+    <script>
+        // Function to generate the menu based on the user's role
+        function generateMenu(userRole) {
+            const menuList = document.getElementById('menuList');
+            menuList.innerHTML = ''; // Clear existing menu items
+
+            // Common menu items
+            const commonMenuItems = ['Home', 'Contact', 'About Us'];
+
+            // Add common menu items
+            for (const menuItem of commonMenuItems) {
+                const li = document.createElement('li');
+                li.textContent = menuItem;
+                menuList.appendChild(li);
+            }
+
+            // Check user role and add additional menu items
+            if (userRole === 'instructor') {
+                const careerLi = document.createElement('li');
+                careerLi.textContent = 'Career';
+                menuList.appendChild(careerLi);
+            }
+        }
+
+        // Add an event listener to the button
+        const generateButton = document.getElementById('generateMenu');
+        generateButton.addEventListener('click', function () {
+            const userName = prompt('Enter your username (Basant or Ada):');
+
+            if (userName === 'Basant') {
+                generateMenu('instructor');
+            } else if (userName === 'Ada') {
+                generateMenu('student');
+            } else {
+                alert('Invalid username. Please enter Basant or Ada.');
+            }
+        });
+    </script>
+</body>
+</html>

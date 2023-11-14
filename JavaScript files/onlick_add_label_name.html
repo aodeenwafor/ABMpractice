@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Onclick replace</title>
+</head>
+<body>
+
+<label id="nameLabel"></label>
+<button id="updateButton" onclick="updateLabel()">Submit</button>
+
+<script>
+    function updateLabel() {
+        var nameLabel = document.getElementById("nameLabel");
+        nameLabel.textContent = "Username"; 
+    }
+</script>
+
+</body>
+</html>

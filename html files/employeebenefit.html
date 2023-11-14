@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script >
+		var intEnglishTotalMarks=100;
+        var intMathsTotalMarks=100;
+		var intBiologyTotalMarks=100;
+		var intChemistryTotalMarks=100;
+		var intCommerceTotalMarks=100;
+		var intPhysicsTotalMarks=100;
+        
+        var intEnglishFT=78;
+        var intMathsFT=80;
+		var intBiologyFT=72;
+		var intChemistryFT=78;
+		var intCommerceFT=75;
+		var intPhysicsFT=70;
+
+
+		function fncfillTotalMarks(){
+		document.getElementById("lblEnglishTotalMarks").innerHTML=intEnglishTotalMarks;
+		document.getElementById("lblMathsTotalMarks").innerHTML=intMathsTotalMarks;
+		document.getElementById("lblBiologyTotalMarks").innerHTML=intBiologyTotalMarks;
+		document.getElementById("lblChemistryTotalMarks").innerHTML=intChemistryTotalMarks;
+		document.getElementById("lblCommerceTotalMarks").innerHTML=intCommerceTotalMarks;
+		document.getElementById("lblPhysicsTotalMarks").innerHTML=intPhysicsTotalMarks;
+
+        var sum=(intEnglishTotalMarks)+(intBiologyTotalMarks)+(intChemistryTotalMarks)+(intMathsTotalMarks)+(intCommerceTotalMarks)+(intPhysicsTotalMarks)
+		 document.getElementById("lblTMfirstT").innerHTML = sum;
+
+         document.getElementById("lblEnglishFT").innerHTML=intEnglishFT;
+		document.getElementById("lblMathsFT").innerHTML=intMathsFT;
+		document.getElementById("lblBiologyFT").innerHTML=intBiologyFT;
+		document.getElementById("lblChemistryFT").innerHTML=intChemistryFT;
+		document.getElementById("lblCommerceFT").innerHTML=intCommerceFT;
+		document.getElementById("lblPhysicsFT").innerHTML=intPhysicsFT;
+
+        var sum=(intEnglishFT)+(intMathsFT)+(intBiologyFT)+(intChemistryFT)+(intCommerceFT)+(intPhysicsFT)
+          document.getElementById("lblTOMFirstT").innerHTML = sum;
+
+          fncGrades();
+		}
+
+           function fncGrades(){
+
+			if(intEnglishFT >= 75){
+				document.getElementById("EnglishFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("EnglishFTStatus").innerHTML="Fail";
+			}
+             if(intMathsFT >= 75){
+				document.getElementById("MathsFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("MathsFTStatus").innerHTML="Fail";
+			}
+
+            if(intBiologyFT >= 75){
+				document.getElementById("BiologyFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("BiologyFTStatus").innerHTML="Fail";
+			}
+            if(intChemistryFT >= 75){
+				document.getElementById("ChemistryFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("ChemistryFTStatus").innerHTML="Fail";
+			}
+             if(intCommerceFT>= 75){
+				document.getElementById("CommerceFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("CommerceFTStatus").innerHTML="Fail";
+			}
+          if(intPhysicsFT>= 75){
+				document.getElementById("PhysicsFTStatus").innerHTML="Pass";
+			}
+			else{
+				document.getElementById("PhysicsFTStatus").innerHTML="Fail";
+			}
+
+		}
+
+
+	</script>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;font-size: 15px;
+    }
+    table,  td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th{
+        border: 1px solid white;
+      border-collapse: collapse;
+    }
+    .container{padding: 20px;
+     margin-left: 80px;
+     margin-right: 100px;width: 70%;
+    
+     background-color: white;
+     border-radius: 5px;
+   }
+   th {
+  
+    background-color: #FF2B2B;color: white;
+  }
+  th, td {
+    padding: 15px;
+    text-align: center;
+  }
+</style>
+</head>
+<body onload="fncfillTotalMarks();">
+  <div class="container">
+    
+    <table style="width:100%">
+        <tr>
+            <b><th colspan="9" style="text-align: left;">Employee Benefits</th>  
+          </tr>  
+      <tr>
+        <th>Employee #</th>
+        <th>Name</th>
+        <th >Status</th>
+        <th colspan="2" >Healthcare</th>
+        <th colspan="2">Medical Leave</th>
+        <th colspan="2">ESOP</th>
+      </tr>
+      <tr>
+        <td style="text-align: left;"><b></td>
+          <td><label id="lblTotalMarksFirstT"></label></td>
+          <td><label id="lblObtMarksFirstT"></label></td>
+          <td><label id="lblObtMarksFirstT"></label>Included</td>
+          <td><label id="lblObtMarksFirstT"></label>Not Included</td>
+          <td><label id="lblObtMarksFirstT"></label>Included</td>
+          <td><label id="lblObtMarksFirstT"></label>Not Included</td>
+          <td><label id="lblObtMarksFirstT"></label>Included</td>
+          <td><label id="lblObtMarksFirstT"></label>Not Included</td>
+         
+        </tr>
+      <tr>
+        <td style="text-align: left">205100<b></td>
+          <td><label id="lblTotalMarksFirstT"></label>James Smith</td>
+          <td><label id="lblObtMarksFirstT"></label>Permanent</td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">205101</td>
+          <td><label id="lblTotalMarksFirstT"></label>Tony Sandler</td>
+          <td><label id="lblObtMarksFirstT"></label>Casual</td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">205102</td>
+          <td><label id="lblTotalMarksFirstT"></label>Lilian Kim</td>
+          <td><label id="lblObtMarksFirstT"></label>Permanent</td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">205103</td>
+            <td><label id="lblTotalMarksFirstT"></label>Kevin Hart</td>
+          <td><label id="lblObtMarksFirstT"></label>Permanent</td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">205104</td>
+          <td><label id="lblTotalMarksFirstT"></label>Chris Rock</td>
+          <td><label id="lblObtMarksFirstT"></label>Permanent</td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+        </tr>
+        <tr>
+          <td style="text-align: left">205105</td>
+          <td><label id="lblTotalMarksFirstT"></label>Eddie Griffin</td>
+          <td><label id="lblObtMarksFirstT"></label>Casual</td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+        </tr>
+        <tr>
+          <td style="text-align: left"></td>
+          <td><label id="lblTotalMarksFirstT"></label></td>
+          <td><label id="lblObtMarksFirstT"></label></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+        </tr>
+        <tr>
+          <td style="text-align: left"><label id="Total"></label></td>
+         <td><label id="lblTotalMarksFirstT"></label></td>
+          <td><label id="lblObtMarksFirstT"></label></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+          <td> <input type="checkbox"name="remember" ></td>
+
+          </tr>
+
+        </table>
+        <br>
+        <button style="background-color: #FF2B2B;width: 140px;color: white;font-size: 14px;border-radius: 3px;
+        border: none;padding: 15px;float: right;"> Submit</button>
+      </div>
+    </body>
+    </html>
